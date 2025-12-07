@@ -42,6 +42,21 @@ const Certificates = () => {
       icon: Award,
       tags: ["MSME", "Udyam", "Government", "Compliance"]
     },
+    {
+      id: 3,
+      title: "AAMCT1691H Certificate",
+      category: "legal",
+      type: "Tax / Registration Certificate",
+      description: "Official certificate document AAMCT1691H for Thrayana Private Limited, confirming registration and compliance status.",
+      longDescription: "This certificate document confirms the registration and compliance status for Thrayana Private Limited. It serves as an official record of our legal and regulatory standing.",
+      filePath: "/assets/certificates/AAMCT1691H.pdf",
+      issueDate: "—",
+      validUntil: "As per regulations",
+      issuingAuthority: "Government Authority",
+      status: "Active",
+      icon: FileText,
+      tags: ["Legal", "Registration", "Compliance", "Government"]
+    },
 
   ];
 
