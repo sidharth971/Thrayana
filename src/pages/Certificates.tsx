@@ -57,7 +57,21 @@ const Certificates = () => {
       icon: FileText,
       tags: ["Legal", "Registration", "Compliance", "Government"]
     },
-
+    {
+      id: 4,
+      title: "FSSAI License",
+      category: "legal",
+      type: "Food Safety License",
+      description: "Official FSSAI State License for Thrayana Private Limited, ensuring compliance with food safety and standards.",
+      longDescription: "This license is issued by the Food Safety and Standards Authority of India (FSSAI), certifying that Thrayana Private Limited complies with the Food Safety and Standards Act, 2006. It authorizes the handling and trade of food products.",
+      filePath: "/assets/certificates/FSSAI.pdf",
+      issueDate: "—",
+      validUntil: "As per FSSAI regulations",
+      issuingAuthority: "Food Safety and Standards Authority of India",
+      status: "Active",
+      icon: Shield,
+      tags: ["FSSAI", "Food Safety", "License", "Government"]
+    }
   ];
 
   const categories = [
