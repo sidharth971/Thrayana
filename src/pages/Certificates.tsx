@@ -71,6 +71,21 @@ const Certificates = () => {
       status: "Active",
       icon: Shield,
       tags: ["FSSAI", "Food Safety", "License", "Government"]
+    },
+    {
+      id: 5,
+      title: "GST Certificate",
+      category: "legal",
+      type: "Tax Registration",
+      description: "Official GST Registration Certificate for Thrayana Private Limited.",
+      longDescription: "This certificate confirms that Thrayana Private Limited is registered under the Goods and Services Tax Act, authorizing us to conduct business and collect taxes as per compliant norms.",
+      filePath: "/assets/certificates/GST_certificate.pdf",
+      issueDate: "—",
+      validUntil: "Permanent",
+      issuingAuthority: "Government of India",
+      status: "Active",
+      icon: FileText,
+      tags: ["Legal", "GST", "Tax", "Compliance"]
     }
   ];
 
@@ -79,8 +94,8 @@ const Certificates = () => {
     { id: "legal", name: "Legal Documents", count: certificates.filter(c => c.category === "legal").length }
   ];
 
-  const filteredCertificates = selectedCategory === "all" 
-    ? certificates 
+  const filteredCertificates = selectedCategory === "all"
+    ? certificates
     : certificates.filter(cert => cert.category === selectedCategory);
 
   const handlePreview = (filePath: string) => {
@@ -96,9 +111,9 @@ const Certificates = () => {
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="animate-fade-in-up">
@@ -106,7 +121,7 @@ const Certificates = () => {
                   Our Certifications & Documents
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  We maintain the highest standards of quality, safety, and compliance. 
+                  We maintain the highest standards of quality, safety, and compliance.
                   Explore our comprehensive collection of certifications and legal documents.
                 </p>
               </div>
@@ -123,11 +138,11 @@ const Certificates = () => {
                 <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
                   <TabsList className="grid w-full grid-cols-2 h-auto bg-card/50 backdrop-blur-sm border border-blue-200/20 shadow-lg">
                     {categories.map((category, index) => (
-                      <TabsTrigger 
-                        key={category.id} 
+                      <TabsTrigger
+                        key={category.id}
                         value={category.id}
                         className="flex flex-col items-center gap-1 py-3 sm:py-3 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:scale-105 category-filter"
-                        style={{animationDelay: `${index * 0.1}s`}}
+                        style={{ animationDelay: `${index * 0.1}s` }}
                       >
                         <span className="text-lg sm:text-xl font-medium">{category.name}</span>
                         <Badge variant="secondary" className="text-base badge-animate">
@@ -144,10 +159,10 @@ const Certificates = () => {
                 {filteredCertificates.map((certificate, index) => {
                   const IconComponent = certificate.icon;
                   return (
-                    <Card 
-                      key={certificate.id} 
+                    <Card
+                      key={certificate.id}
                       className="group hover:shadow-xl transition-all duration-500 border-2 hover:border-blue-300/50 bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm product-card animate-fade-in-up"
-                      style={{animationDelay: `${index * 0.2}s`}}
+                      style={{ animationDelay: `${index * 0.2}s` }}
                     >
                       <CardHeader className="pb-4">
                         <div className="flex items-start justify-between">
@@ -164,7 +179,7 @@ const Certificates = () => {
                               </Badge>
                             </div>
                           </div>
-                          <Badge 
+                          <Badge
                             variant={certificate.status === "Active" ? "default" : "secondary"}
                             className={`text-sm ${certificate.status === "Active" ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white" : ""}`}
                           >
@@ -172,12 +187,12 @@ const Certificates = () => {
                           </Badge>
                         </div>
                       </CardHeader>
-                      
+
                       <CardContent className="space-y-4">
                         <p className="text-base text-muted-foreground leading-relaxed">
                           {certificate.description}
                         </p>
-                        
+
                         {/* Certificate Details */}
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           <div>
@@ -205,8 +220,8 @@ const Certificates = () => {
 
                         {/* Action Button */}
                         <div className="pt-2">
-                          <Button 
-                            size="lg" 
+                          <Button
+                            size="lg"
                             className="w-full text-base btn-primary transform hover:scale-105 transition-all duration-300"
                             onClick={() => handlePreview(certificate.filePath)}
                           >
@@ -239,9 +254,9 @@ const Certificates = () => {
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-300/10 to-purple-300/10 rounded-full blur-2xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-tl from-purple-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+            <div className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-tl from-purple-300/10 to-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="animate-fade-in-up">
@@ -272,10 +287,10 @@ const Certificates = () => {
                     icon: "🌍"
                   }
                 ].map((item, index) => (
-                  <Card 
-                    key={index} 
+                  <Card
+                    key={index}
                     className="card-hover bg-gradient-to-br from-white to-blue-50/30 backdrop-blur-sm border border-blue-200/20 animate-fade-in-up"
-                    style={{animationDelay: `${index * 0.1}s`}}
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-3">
