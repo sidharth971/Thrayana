@@ -38,10 +38,10 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="text-xl font-bold text-white">Our Products</h4>
             <ul className="space-y-1.5 text-base">
-              <li><Link to="/products/2" className="text-gray-300 hover:text-primary transition-colors font-medium">Turmeric Powder</Link></li>
-              <li><Link to="/products/8" className="text-gray-300 hover:text-primary transition-colors font-medium">Moringa Powder</Link></li>
-              <li><Link to="/products/1" className="text-gray-300 hover:text-primary transition-colors font-medium">Banana Powder</Link></li>
-              <li><Link to="/products/3" className="text-gray-300 hover:text-primary transition-colors font-medium">Red Chilli Powder</Link></li>
+              <li><Link to="/products/Turmeric Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Turmeric Powder</Link></li>
+              <li><Link to="/products/Moringa Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Moringa Powder</Link></li>
+              <li><Link to="/products/Banana Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Banana Powder</Link></li>
+              <li><Link to="/products/Guntur Red Chilli Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Red Chilli Powder</Link></li>
             </ul>
           </div>
 

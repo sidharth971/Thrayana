@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const ProductDetails = () => {
-  const { productId } = useParams();
+  const { productName } = useParams();
   const navigate = useNavigate();
 
   // Force scroll to top immediately and after a delay
@@ -45,7 +45,7 @@ const ProductDetails = () => {
       clearTimeout(timer2);
       clearTimeout(timer3);
     };
-  }, [productId]);
+  }, [productName]);
 
   const products = [
     {
@@ -616,7 +616,8 @@ const ProductDetails = () => {
     }
   ];
 
-  const product = products.find(p => p.id === parseInt(productId || "0"));
+  const decodedName = decodeURIComponent(productName || "");
+  const product = products.find(p => p.name === decodedName);
 
   if (!product) {
     return (

@@ -476,7 +476,7 @@ const Products = () => {
                         if (product.name === "Kondapalli Toys") {
                           navigate('/kondapalli-toys');
                         } else {
-                          navigate(`/products/${product.id}`);
+                          navigate(`/products/${product.name}`);
                         }
                       }}
                     >

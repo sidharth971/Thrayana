@@ -13,7 +13,7 @@ const ProductsSection = () => {
     },
     {
       id: 10,
-      name: "Honey",
+      name: "Wild Forest Honey",
       image: "/assets/products/wild-forest-honey/honey_4.png",
       productId: 10
     },
@@ -43,7 +43,7 @@ const ProductsSection = () => {
     },
     {
       id: 4,
-      name: "Cumin Seed",
+      name: "Cumin Seeds",
       image: "/assets/products/cumin-seeds/Cumin-Seed.webp",
       productId: 4
     },
@@ -86,7 +86,7 @@ const ProductsSection = () => {
                   if (product.name === "Kondapalli Toys") {
                     navigate('/kondapalli-toys');
                   } else {
-                    navigate(`/products/${product.productId}`);
+                    navigate(`/products/${product.name}`);
                   }
                 }}
               >
