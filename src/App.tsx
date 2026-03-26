@@ -12,6 +12,9 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import KondapalliToys from "./pages/KondapalliToys";
 import ScrollToTop from "./components/ScrollToTop";
+import Blog from "./pages/Blog";
+import CreateBlog from "./pages/CreateBlog";
+import BlogDetails from "./pages/BlogDetails";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/products/:productName" element={<ProductDetails />} />
           <Route path="/kondapalli-toys" element={<KondapalliToys />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/create" element={<CreateBlog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

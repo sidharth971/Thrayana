@@ -125,6 +125,12 @@ const Header = () => {
               Certificates
             </a>
             <a 
+              onClick={() => navigate('/blog')}
+              className={`${getLinkClasses('/blog')} text-base xl:text-lg`}
+            >
+              Blog
+            </a>
+            <a 
               onClick={navigateToContact}
               className={`${getLinkClasses('/contact')} text-base xl:text-lg`}
             >
@@ -134,11 +140,6 @@ const Header = () => {
 
           {/* Desktop Contact Info & CTA */}
           <div className="hidden xl:flex items-center gap-6">
-            <div className="text-right text-base">
-              <div className="font-bold text-white">+91 9160040202</div>
-              <div className="font-bold text-white">+91 8310439092</div>
-              <div className="text-gray-300">sales@thrayana.com</div>
-            </div>
             <Button 
               onClick={handleBrochureClick}
               className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold text-lg px-6 py-3 rounded-2xl shadow-md"
@@ -196,6 +197,12 @@ const Header = () => {
                   Certificates
                 </a>
                 <a 
+                  onClick={() => handleNavigation('/blog')}
+                  className={`${getLinkClasses('/blog')} block text-xl py-2`}
+                >
+                  Blog
+                </a>
+                <a 
                   onClick={() => handleNavigation('/contact')}
                   className={`${getLinkClasses('/contact')} block text-xl py-2`}
                 >
@@ -205,11 +212,6 @@ const Header = () => {
 
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t">
-                <div className="space-y-2">
-                  <div className="font-bold text-white">+91 9160040202</div>
-                  <div className="font-bold text-white">+91 8310439092</div>
-                  <div className="text-gray-300 text-sm">sales@thrayana.com</div>
-                </div>
                 <Button 
                   onClick={handleBrochureClick}
                   className="btn-primary w-full mt-4"
