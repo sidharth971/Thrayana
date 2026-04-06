@@ -6,7 +6,18 @@ export interface BlogPost {
   imageUrl: string;
   createdAt: string;
   author: string;
+  slug: string;
 }
+
+export const generateSlug = (text: string): string => {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
+};
 
 const STORAGE_KEY = 'thrayana_blogs';
 
@@ -19,7 +30,8 @@ const defaultBlogs: BlogPost[] = [
     content: 'A2 Gir Cow Ghee is known for its rich flavor, golden color, and traditional Ayurvedic benefits. Our ghee is produced using the traditional bilona method that preserves all natural nutrients. Regular consumption of A2 ghee supports digestive health, boosts immunity, and is rich in fat-soluble vitamins. It has anti-inflammatory properties and is highly stable for cooking at high temperatures.',
     imageUrl: '/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png',
     createdAt: new Date(Date.now() - 86400000 * 5).toISOString(),
-    author: 'Thrayana Experts'
+    author: 'Thrayana Experts',
+    slug: 'the-health-benefits-of-a2-gir-cow-ghee'
   },
   {
     id: '2',
@@ -28,7 +40,8 @@ const defaultBlogs: BlogPost[] = [
     content: 'Pure wild forest honey collected from natural beehives in pristine forest areas represents nature at its finest. Unlike commercially processed honey, our wild forest honey is raw, unfiltered, and unprocessed to preserve all natural nutrients and medicinal properties. It is rich in antioxidants, flavonoids, and natural antibacterial properties. The natural crystallization process is a testament to its purity.',
     imageUrl: '/assets/products/wild-forest-honey/honey_4.png',
     createdAt: new Date(Date.now() - 86400000 * 2).toISOString(),
-    author: 'Thrayana Experts'
+    author: 'Thrayana Experts',
+    slug: 'why-choose-wild-forest-honey'
   }
 ];
 
@@ -37,7 +50,11 @@ export const blogService = {
     try {
       const blogsJson = localStorage.getItem(STORAGE_KEY);
       if (blogsJson) {
-        return JSON.parse(blogsJson);
+        const parsed = JSON.parse(blogsJson) as BlogPost[];
+        return parsed.map(blog => ({
+          ...blog,
+          slug: blog.slug || generateSlug(blog.title)
+        }));
       }
       
       // Initialize with default blogs if empty
@@ -54,13 +71,19 @@ export const blogService = {
     return blogs.find(blog => blog.id === id);
   },
 
-  createBlog: (blogData: Omit<BlogPost, 'id' | 'createdAt'>): BlogPost => {
+  getBlogBySlug: (slug: string): BlogPost | undefined => {
+    const blogs = blogService.getBlogs();
+    return blogs.find(blog => blog.slug === slug || blog.id === slug);
+  },
+
+  createBlog: (blogData: Omit<BlogPost, 'id' | 'createdAt' | 'slug'>): BlogPost => {
     const blogs = blogService.getBlogs();
     
     const newBlog: BlogPost = {
       ...blogData,
       id: Date.now().toString(),
       createdAt: new Date().toISOString(),
+      slug: generateSlug(blogData.title),
     };
     
     const updatedBlogs = [newBlog, ...blogs];

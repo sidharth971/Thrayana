@@ -31,6 +31,17 @@ const CreateBlog = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, imageUrl: reader.result as string }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -85,17 +96,22 @@ const CreateBlog = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="imageUrl" className="text-sm font-semibold text-foreground">Cover Image URL <span className="text-red-500">*</span></Label>
+                  <Label htmlFor="imageUpload" className="text-sm font-semibold text-foreground">Cover Image <span className="text-red-500">*</span></Label>
                   <Input 
-                    id="imageUrl"
-                    name="imageUrl"
+                    id="imageUpload"
+                    name="imageUpload"
+                    type="file"
+                    accept="image/*"
                     required
-                    value={formData.imageUrl}
-                    onChange={handleChange}
-                    placeholder="e.g. /assets/products/honey_1.png or https://..."
-                    className="bg-white/50 focus:bg-white transition-colors"
+                    onChange={handleImageUpload}
+                    className="bg-white/50 focus:bg-white transition-colors file:mr-4 file:py-1.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-slate-100 file:text-slate-900 hover:file:bg-slate-200 cursor-pointer text-muted-foreground"
                   />
-                  <p className="text-xs text-muted-foreground mt-1">Provide a high-quality image link for the cover.</p>
+                  {formData.imageUrl && (
+                    <div className="mt-2 h-24 w-36 relative rounded-md overflow-hidden border">
+                      <img src={formData.imageUrl} alt="Preview" className="object-cover w-full h-full" />
+                    </div>
+                  )}
+                  <p className="text-xs text-muted-foreground mt-1">Upload a high-quality image from your system for the cover.</p>
                 </div>
 
                 <div className="space-y-2">
