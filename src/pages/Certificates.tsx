@@ -86,6 +86,21 @@ const Certificates = () => {
       status: "Active",
       icon: FileText,
       tags: ["Legal", "GST", "Tax", "Compliance"]
+    },
+    {
+      id: 6,
+      title: "APEDA Certificate",
+      category: "legal",
+      type: "Export Registration",
+      description: "Official APEDA Registration Certificate for Thrayana Private Limited.",
+      longDescription: "This certificate confirms registration with the Agricultural and Processed Food Products Export Development Authority (APEDA), authorizing the export of agricultural products.",
+      filePath: "/assets/certificates/THRAYANA.pdf",
+      issueDate: "—",
+      validUntil: "Permanent",
+      issuingAuthority: "APEDA, Government of India",
+      status: "Active",
+      icon: Award,
+      tags: ["APEDA", "Export", "Agriculture", "Government"]
     }
   ];
 

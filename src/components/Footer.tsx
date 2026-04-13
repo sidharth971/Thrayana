@@ -22,16 +22,16 @@ const Footer = () => {
               We specialize in authentic Indian flavors and traditional handicrafts.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://x.com/Thrayana_pvtltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all bg-white/5 p-2.5 rounded-full hover:bg-black hover:scale-110 shadow-sm" aria-label="X (Twitter)">
+              <a href="https://x.com/Thrayana_pvtltd" target="_blank" rel="noopener noreferrer" className="text-white transition-all bg-black p-2.5 rounded-full hover:scale-110 hover:ring-2 hover:ring-white/20 shadow-sm" aria-label="X (Twitter)">
                 <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
               </a>
-              <a href="https://www.facebook.com/people/Thrayana-Private-Limited/61573359263495" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all bg-white/5 p-2.5 rounded-full hover:bg-[#1877F2] hover:scale-110 shadow-sm" aria-label="Facebook">
+              <a href="https://www.facebook.com/people/Thrayana-Private-Limited/61573359263495" target="_blank" rel="noopener noreferrer" className="text-white transition-all bg-[#1877F2] p-2.5 rounded-full hover:opacity-90 hover:scale-110 shadow-sm" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="https://www.instagram.com/thrayana_private_limited/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all bg-white/5 p-2.5 rounded-full hover:bg-gradient-to-tr hover:from-[#f09433] hover:to-[#bc1888] hover:scale-110 shadow-sm" aria-label="Instagram">
+              <a href="https://www.instagram.com/thrayana_private_limited/" target="_blank" rel="noopener noreferrer" className="text-white transition-all bg-gradient-to-tr from-[#f09433] to-[#bc1888] p-2.5 rounded-full hover:opacity-90 hover:scale-110 shadow-sm" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://www.linkedin.com/company/108383527/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all bg-white/5 p-2.5 rounded-full hover:bg-[#0A66C2] hover:scale-110 shadow-sm" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/108383527/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="text-white transition-all bg-[#0A66C2] p-2.5 rounded-full hover:opacity-90 hover:scale-110 shadow-sm" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
