@@ -617,7 +617,7 @@ const ProductDetails = () => {
   ];
 
   const decodedName = decodeURIComponent(productName || "");
-  const product = products.find(p => p.name === decodedName);
+  const product = products.find(p => p.name.replace(/\s+/g, '-') === decodedName);
 
   if (!product) {
     return (

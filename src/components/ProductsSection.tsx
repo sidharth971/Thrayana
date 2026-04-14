@@ -86,7 +86,7 @@ const ProductsSection = () => {
                   if (product.name === "Kondapalli Toys") {
                     navigate('/kondapalli-toys');
                   } else {
-                    navigate(`/products/${product.name}`);
+                    navigate(`/products/${product.name.replace(/\s+/g, '-')}`);
                   }
                 }}
               >

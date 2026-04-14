@@ -458,6 +458,14 @@ const Contact = () => {
                       <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Can I track my shipment once it's dispatched?</h3>
                       <p className="text-sm sm:text-base text-gray-600">Absolutely! Once your order is shipped, we will provide you with tracking details to monitor your shipment's progress.</p>
                     </div>
+                    <div className="border-l-4 border-rose-500 pl-4 sm:pl-6">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">What is the minimum order quantity (MOQ)?</h3>
+                      <p className="text-sm sm:text-base text-gray-600">Our minimum order quantity is 1000 KG, though it may vary depending on the product category and the chosen shipment type (FCL or LCL).</p>
+                    </div>
+                    <div className="border-l-4 border-teal-500 pl-4 sm:pl-6">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Do you provide customized packaging?</h3>
+                      <p className="text-sm sm:text-base text-gray-600">Yes, we provide comprehensive customized packaging and white-labeling solutions specifically designed to meet your market's unique requirements.</p>
+                    </div>
                   </div>
 
                   <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">

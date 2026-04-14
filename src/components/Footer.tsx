@@ -53,10 +53,10 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="text-xl font-bold text-white">Our Products</h4>
             <ul className="space-y-1.5 text-base">
-              <li><Link to="/products/Turmeric Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Turmeric Powder</Link></li>
-              <li><Link to="/products/Moringa Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Moringa Powder</Link></li>
-              <li><Link to="/products/Banana Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Banana Powder</Link></li>
-              <li><Link to="/products/Guntur Red Chilli Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Red Chilli Powder</Link></li>
+              <li><Link to="/products/Turmeric-Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Turmeric Powder</Link></li>
+              <li><Link to="/products/Moringa-Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Moringa Powder</Link></li>
+              <li><Link to="/products/Banana-Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Banana Powder</Link></li>
+              <li><Link to="/products/Guntur-Red-Chilli-Powder" className="text-gray-300 hover:text-primary transition-colors font-medium">Red Chilli Powder</Link></li>
             </ul>
           </div>
 
@@ -91,7 +91,7 @@ const Footer = () => {
               © THRAYANA PRIVATE LIMITED. All rights reserved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/privacy" className="text-gray-400 hover:text-primary transition-colors">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-gray-400 hover:text-primary transition-colors">
