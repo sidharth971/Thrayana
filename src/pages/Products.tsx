@@ -22,33 +22,33 @@ const Products = () => {
   const products = [
     {
       id: 9,
-      name: "A2 Gir Cow Ghee",
-      category: "dairy-products",
-      image: "/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png",
-      newImage: "/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png",
-      description: "Premium A2 Gir Cow Ghee made from the milk of indigenous Gir cows, known for its rich flavor, golden color, and traditional Ayurvedic benefits.",
+      name: "Ashwagandha Root Powder",
+      category: "natural-products",
+      image: "/assets/products/ashwagandha/ashwagandha_main.png",
+      newImage: "/assets/products/ashwagandha/ashwagandha_gallery_1.png",
+      description: "Premium organic Ashwagandha root powder, a powerful adaptogen known for stress relief, boosting immunity, and improving overall vitality.",
       details: {
-        origin: "Gujarat, India",
-        processing: "Traditional bilona method",
-        packaging: "Glass jars, 500g, 1kg, 5kg containers",
-        certifications: ["FSSAI", "Organic", "A2 Milk Certified"],
-        applications: ["Cooking", "Traditional medicine", "Ayurvedic treatments", "Religious ceremonies"],
+        origin: "Rajasthan, India",
+        processing: "Sun-dried and finely ground",
+        packaging: "Glass jars, 250g, 500g, 1kg containers",
+        certifications: ["FSSAI", "Organic", "GMP Certified"],
+        applications: ["Health supplements", "Herbal teas", "Ayurvedic treatments", "Functional foods"],
         specifications: {
-          fatContent: "99.5-99.9%",
-          moisture: "< 0.5%",
-          color: "Golden yellow",
-          shelfLife: "12 months",
-          smokePoint: "250°C",
-          meltingPoint: "32-35°C",
-          acidity: "< 0.5%",
-          peroxideValue: "< 1.0 meq/kg"
+          withanolides: "2.5% - 5%",
+          moisture: "< 8%",
+          color: "Light brown to beige",
+          shelfLife: "24 months",
+          particleSize: "80-100 mesh",
+          solubility: "Good in warm water/milk",
+          ashContent: "< 7%",
+          heavyMetals: "Within permissible limits"
         }
       },
       features: [
-        "Made from A2 milk of Gir cows",
-        "Traditional bilona churning method",
-        "Rich in healthy fats and vitamins",
-        "High smoke point for cooking"
+        "100% organic and purely natural",
+        "High concentration of withanolides",
+        "Potent adaptogenic properties",
+        "Sustainably harvested roots"
       ]
     },
     {
@@ -217,29 +217,29 @@ const Products = () => {
     },
     {
       id: 5,
-      name: "Banana Fiber",
-      category: "textiles",
-      image: "/assets/products/banana-fiber/Banana-Fiber.webp",
-      newImage: "/assets/products/banana-fiber/banana-fiber-products.jpg",
-      description: "Sustainable banana fiber extracted from banana plant stems, perfect for eco-friendly textiles and handicrafts.",
+      name: "Bagasse Cutlery",
+      category: "eco-friendly",
+      image: "/assets/products/bagasse-cutlery/bagasse-main.png",
+      newImage: "/assets/products/bagasse-cutlery/bagasse-set.png",
+      description: "Premium eco-friendly cutlery made from 100% natural sugarcane bagasse. Our biodegradable and compostable forks, spoons, and knives are the perfect sustainable alternative to plastic tableware.",
       details: {
-        origin: "Kerala & Karnataka, India",
-        processing: "Extracted and processed",
-        packaging: "Bales of 100kg",
-        certifications: ["Organic", "Fair Trade", "Eco-friendly"],
-        applications: ["Textiles", "Handicrafts", "Paper", "Ropes"],
+        origin: "South India",
+        processing: "High-heat molded from sugarcane bagasse",
+        packaging: "Bulk cartons, 50/100/250 sets per pack",
+        certifications: ["ISO 22000:2025", "FSSAI", "Biodegradable Certified", "FDA Approved"],
+        applications: ["Catering events", "Quick-service restaurants", "Outdoor events", "Sustainable home dining"],
         specifications: {
-          fiberLength: "2-4 meters",
-          tensileStrength: "High",
-          color: "Natural cream to brown",
-          sustainability: "100% biodegradable"
+          material: "100% Sugarcane Bagasse",
+          sturdiness: "High-tensile strength",
+          temperatureResistance: "-20°C to 120°C",
+          sustainability: "100% compostable within 90 days"
         }
       },
       features: [
-        "100% biodegradable",
-        "Sustainable alternative to synthetic fibers",
-        "Strong and durable",
-        "Supports rural artisans"
+        "100% biodegradable and compostable",
+        "Sturdy, leak-proof, and oil-resistant",
+        "Microwave and freezer safe",
+        "Food-safe and BPA-free"
       ]
     },
     {
@@ -305,7 +305,7 @@ const Products = () => {
     { id: "natural-products", name: "Natural Products" },
     { id: "spices", name: "Spices" },
     { id: "natural-foods", name: "Natural Foods" },
-    { id: "textiles", name: "Textiles" },
+    { id: "eco-friendly", name: "Eco-Friendly Products" },
     { id: "handicrafts", name: "Handicrafts" },
     { id: "beverages", name: "Beverages" }
   ];
@@ -382,8 +382,15 @@ const Products = () => {
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="group bg-card rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden animate-in fade-in duration-1000 product-card"
+                  className="group bg-card rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden animate-in fade-in duration-1000 product-card cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => {
+                    if (product.name === "Kondapalli Toys") {
+                      navigate('/kondapalli-toys');
+                    } else {
+                      navigate(`/products/${product.name.replace(/\s+/g, '-')}`);
+                    }
+                  }}
                 >
                   {/* Product Image */}
                   <div className="relative overflow-hidden h-48 sm:h-56 lg:h-64">
@@ -472,13 +479,6 @@ const Products = () => {
                     {/* CTA Button */}
                     <Button 
                       className="w-full group-hover:bg-primary/90 transition-colors text-sm sm:text-base"
-                      onClick={() => {
-                        if (product.name === "Kondapalli Toys") {
-                          navigate('/kondapalli-toys');
-                        } else {
-                          navigate(`/products/${product.name.replace(/\s+/g, '-')}`);
-                        }
-                      }}
                     >
                       View Details
                     </Button>

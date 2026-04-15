@@ -7,10 +7,10 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const heroImages = [
-    "/assets/products/a2-gir-cow-ghee/Cow Ghee_4.png",
+    "/assets/products/ashwagandha/ashwagandha_main.png",
     "/assets/products/wild-forest-honey/honey_4.png",
     "/assets/products/kondapalli-toys/Kondapalli-Toys.webp",
-    "/assets/products/banana-fiber/Banana-Fiber.webp",
+    "/assets/products/bagasse-cutlery/bagasse-main.png",
     "/assets/products/moringa-powder/moringa-powder-application.jpg"
   ];
 
@@ -31,13 +31,13 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="flex-1 space-y-6 sm:space-y-8 animate-in slide-in-from-left duration-1000 text-center lg:text-left">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-shadow-lg text-center lg:text-left" style={{ fontFamily: 'Playfair Display, serif' }}>
-              A2 Cow Ghee, Honey, Banana Fiber, Indian Spices & 100% Natural Food <span className="gradient-text">Exporter</span> Globally
+              Ashwagandha, Honey, Bagasse Cutlery, Indian Spices & 100% Natural Food <span className="gradient-text">Exporter</span> Globally
             </h1>
             
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
-              From premium A2 Cow Ghee and pure Wild Forest Honey to traditional Indian spices and 
-              100% natural food products, we export the finest quality natural products globally. Our A2 Gir Cow Ghee is 
-              made using traditional bilona method, while our Wild Forest Honey is sourced from pristine 
+              From premium Ashwagandha Root and pure Wild Forest Honey to traditional Indian spices and 
+              100% natural food products, we export the finest quality natural products globally. Our Ashwagandha is 
+              sustainably harvested and processed to preserve its potent adaptogenic properties, while our Wild Forest Honey is sourced from pristine 
               Western Ghats. Combined with authentic Indian spices and purely natural food products, we connect 
               farmers to global markets, making India a dominant player in natural food exports.
             </p>

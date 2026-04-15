@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-base leading-relaxed">
-              Leading Banana Fiber, Indian spices, processed food & tea exporter connecting global markets with premium quality products. 
+              Leading Bagasse Cutlery, Indian spices, processed food & tea exporter connecting global markets with premium quality products. 
               We specialize in authentic Indian flavors and traditional handicrafts.
             </p>
             <div className="flex gap-4 pt-2">
@@ -66,7 +66,7 @@ const Footer = () => {
             <div className="space-y-2 text-base">
               <div className="flex items-center gap-2">
                 <span className="text-primary">📞</span>
-                <span className="text-gray-300 font-medium">+91 9160040202</span>
+                <span className="text-gray-300 font-medium">+91-9703164064</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-primary">📞</span>

@@ -7,8 +7,8 @@ const ProductsSection = () => {
   const products = [
     {
       id: 9,
-      name: "A2 Gir Cow Ghee",
-      image: "/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png",
+      name: "Ashwagandha Root Powder",
+      image: "/assets/products/ashwagandha/ashwagandha_main.png",
       productId: 9
     },
     {
@@ -49,8 +49,8 @@ const ProductsSection = () => {
     },
     {
       id: 5,
-      name: "Banana Fiber",
-      image: "/assets/products/banana-fiber/Banana-Fiber.webp",
+      name: "Bagasse Cutlery",
+      image: "/assets/products/bagasse-cutlery/bagasse-main.png",
       productId: 5
     },
     {

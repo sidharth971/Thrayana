@@ -50,66 +50,72 @@ const ProductDetails = () => {
   const products = [
     {
       id: 9,
-      name: "A2 Gir Cow Ghee",
-      category: "dairy-products",
-      mainImage: "/assets/products/a2-gir-cow-ghee/Cow Ghee_4.png",
+      name: "Ashwagandha Root Powder",
+      category: "natural-products",
+      mainImage: "/assets/products/ashwagandha/ashwagandha_main.png",
       gallery: [
-        "/assets/products/a2-gir-cow-ghee/Cow Ghee_2.png",
-        "/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png",
-        "/assets/products/a2-gir-cow-ghee/Cow Ghee_1.png"
+        "/assets/products/ashwagandha/ashwagandha_gallery_1.png",
+        "/assets/products/ashwagandha/ashwagandha_gallery_2.png",
+        "/assets/products/ashwagandha/ashwagandha_gallery_3.png"
       ],
-      description: "Premium A2 Gir Cow Ghee made from the milk of indigenous Gir cows, known for its rich flavor, golden color, and traditional Ayurvedic benefits. Our ghee is produced using the traditional bilona method that preserves all natural nutrients.",
-      longDescription: "Our premium A2 Gir Cow Ghee is sourced from the finest Gir cows in Gujarat, India. The Gir breed is known for producing A2 milk, which contains the A2 beta-casein protein that is easier to digest and has numerous health benefits. The traditional bilona method involves churning curd to extract butter, which is then heated to produce pure ghee. This process preserves the natural nutrients and gives our ghee its distinctive golden color and rich aroma.",
+      description: "Premium organic Ashwagandha root powder, a powerful adaptogen known for stress relief, boosting immunity, and improving overall vitality. Sustainably harvested and finely ground.",
+      longDescription: "Our premium Ashwagandha Root Powder is sourced from the finest organic farms in Rajasthan, India. Known as the 'King of Ayurvedic Herbs', Ashwagandha is a powerful adaptogen that helps the body manage stress, enhances cognitive function, and promotes overall vitality. The roots are carefully hand-harvested, sun-dried, and finely ground at low temperatures to ensure the maximum retention of active compounds, particularly withanolides. Regular consumption supports a balanced mood, restful sleep, and a robust immune system.",
       details: {
-        origin: "Gujarat, India",
-        processing: "Traditional bilona method",
+        origin: "Rajasthan, India",
+        processing: "Sun-dried and finely ground",
         packaging: "Customized packaging",
-        certifications: ["FSSAI", "Organic", "A2 Milk Certified", "Ayurvedic"],
-        applications: ["Cooking", "Traditional medicine", "Ayurvedic treatments", "Religious ceremonies", "Skincare", "Hair care"],
+        certifications: ["FSSAI", "Organic", "GMP Certified", "Ayurvedic"],
+        applications: ["Health supplements", "Functional foods", "Herbal teas", "Ayurvedic treatments", "Smoothies", "Wellness shots"],
         specifications: {
-          fatContent: "99.5-99.9%",
-          moisture: "< 0.5%",
-          color: "Golden yellow",
-          shelfLife: "12 months",
-          smokePoint: "250°C",
-          aroma: "Rich and nutty",
-          texture: "Smooth and creamy",
-          meltingPoint: "32-35°C",
-          density: "0.91-0.93 g/cm³",
-          acidity: "< 0.5%",
-          peroxideValue: "< 1.0 meq/kg",
-          freeFattyAcids: "< 0.3%",
-          unsaponifiableMatter: "0.5-1.5%",
-          iodineValue: "26-38",
-          saponificationValue: "190-200"
+          withanolides: "2.5% - 5%",
+          moisture: "< 8%",
+          color: "Light brown to beige",
+          shelfLife: "24 months",
+          particleSize: "80-100 mesh",
+          aroma: "Earthy and distinct",
+          solubility: "Good in warm water/milk",
+          ashContent: "< 7%",
+          acidInsolubleAsh: "< 1%",
+          heavyMetals: "Within permissible limits",
+          microbiological: "Conforms to export standards"
         },
         nutritionalInfo: {
-          calories: "900 kcal/100g",
-          totalFat: "99.9g/100g",
-          saturatedFat: "61.9g/100g",
-          monounsaturatedFat: "28.7g/100g",
-          polyunsaturatedFat: "3.7g/100g",
-          cholesterol: "256mg/100g",
-          vitaminA: "3069 IU/100g",
-          vitaminE: "2.8mg/100g"
+          calories: "277 kcal/100g",
+          carbohydrates: "46.9g/100g",
+          protein: "3.9g/100g",
+          dietaryFiber: "32.3g/100g",
+          totalFat: "0.3g/100g",
+          iron: "3.3mg/100g",
+          calcium: "23mg/100g",
+          vitaminC: "1.2mg/100g"
         }
       },
       features: [
-        "Made from A2 milk of Gir cows",
-        "Traditional bilona churning method",
-        "Rich in healthy fats and vitamins",
-        "High smoke point for cooking",
-        "No artificial preservatives",
-        "Ayurvedic properties"
+        "100% pure organic root powder",
+        "High withanolide concentration",
+        "Sustainably harvested in Rajasthan",
+        "Processed at low temperatures",
+        "No artificial additives or fillers",
+        "Authentic Ayurvedic herb"
       ],
       benefits: [
-        "Supports digestive health",
-        "Boosts immunity",
-        "Rich in fat-soluble vitamins",
-        "Anti-inflammatory properties",
-        "Traditional healing benefits",
-        "High heat stability for cooking"
-      ]
+        "Potent adaptogen for stress relief",
+        "Boosts immune system function",
+        "Enhances cognitive health and focus",
+        "Promotes restful and restorative sleep",
+        "Increases physical stamina and vitality",
+        "Supports hormonal balance"
+      ],
+      howToUse: {
+        instructions: "Mix 1/2 to 1 teaspoon of Ashwagandha powder into warm milk, smoothies, or herbal teas. Best consumed twice daily for optimal stress relief and vitality.",
+        images: [
+          "/assets/usage/ashwagandha/usage-1.png",
+          "/assets/usage/ashwagandha/usage-2.png",
+          "/assets/usage/ashwagandha/usage-3.png",
+          "/assets/usage/ashwagandha/usage-4.png",
+          "/assets/usage/ashwagandha/usage-5.png"
+        ]
+      }
     },
     {
       id: 10,
@@ -199,7 +205,17 @@ const ProductDetails = () => {
         "Cardiovascular health benefits",
         "Traditional Ayurvedic medicinal properties",
         "Natural prebiotic effects"
-      ]
+      ],
+      howToUse: {
+        instructions: "Enjoy as a natural sweetener in your favorite tea, drizzle over warm pancakes or toast, or mix with warm water and lemon for a refreshing health tonic.",
+        images: [
+          "/assets/products/wild-forest-honey/honey_4.png",
+          "/assets/products/wild-forest-honey/honey_2.png",
+          "/assets/products/wild-forest-honey/honey_3.png",
+          "/assets/products/wild-forest-honey/honey_1.png",
+          "/assets/products/wild-forest-honey/honey_4.png"
+        ]
+      }
     },
     {
       id: 1,
@@ -251,7 +267,17 @@ const ProductDetails = () => {
         "Rich in essential minerals",
         "Ideal for sports nutrition",
         "Safe for children and elderly"
-      ]
+      ],
+      howToUse: {
+        instructions: "Add 1-2 tablespoons to baby porridge, smoothies, protein shakes, or use as a nutrition-rich thickener in your baking recipes.",
+        images: [
+          "/assets/products/banana-powder/Banana-Powder.webp",
+          "/assets/products/banana-powder/banana-powder-process.jpg",
+          "/assets/products/banana-powder/banana-powder-packaging.jpg",
+          "/assets/products/banana-powder/banana-powder-application.jpg",
+          "/assets/products/banana-powder/Banana-Powder.webp"
+        ]
+      }
     },
     {
       id: 8,
@@ -304,7 +330,17 @@ const ProductDetails = () => {
         "Promotes healthy skin",
         "Aids digestion",
         "Rich in plant protein"
-      ]
+      ],
+      howToUse: {
+        instructions: "Blend into green smoothies, juices, or stir into soups and dal. You can also sprinkle it over fresh salads for an extra nutrient boost.",
+        images: [
+          "/assets/usage/moringa-powder/usage-1.png",
+          "/assets/usage/moringa-powder/usage-2.png",
+          "/assets/usage/moringa-powder/usage-1.png",
+          "/assets/usage/moringa-powder/usage-2.png",
+          "/assets/products/moringa-powder/moringa-powder-application.jpg"
+        ]
+      }
     },
     {
       id: 2,
@@ -356,7 +392,17 @@ const ProductDetails = () => {
         "Supports joint health",
         "Promotes healthy skin",
         "Traditional healing properties"
-      ]
+      ],
+      howToUse: {
+        instructions: "Incorporate into curries, prepare 'Golden Milk' by mixing with warm milk and a pinch of black pepper, or use in natural DIY skincare masks.",
+        images: [
+          "/assets/products/turmeric-powder/turmeric-applications.jpg",
+          "/assets/products/turmeric-powder/turmeric-rhizomes.jpg",
+          "/assets/products/turmeric-powder/turmeric-processing.jpg",
+          "/assets/products/turmeric-powder/turmeric-applications.jpg",
+          "/assets/products/turmeric-powder/turmeric-rhizomes.jpg"
+        ]
+      }
     },
     {
       id: 3,
@@ -407,7 +453,17 @@ const ProductDetails = () => {
         "Natural pain relief",
         "Supports weight management",
         "Traditional medicinal properties"
-      ]
+      ],
+      howToUse: {
+        instructions: "Add to spice up your curries, use in marinades for grilling, or sprinkle a pinch on fresh fruit snacks for an authentic spicy kick.",
+        images: [
+          "/assets/products/red-chilli-powder/chilli-powder-applications.jpg",
+          "/assets/products/red-chilli-powder/guntur-chilli.jpg",
+          "/assets/products/red-chilli-powder/chilli-processing.jpg",
+          "/assets/products/red-chilli-powder/chilli-powder-applications.jpg",
+          "/assets/products/red-chilli-powder/guntur-chilli.jpg"
+        ]
+      }
     },
     {
       id: 4,
@@ -459,57 +515,79 @@ const ProductDetails = () => {
         "Antioxidant properties",
         "Traditional medicinal benefits",
         "Culinary versatility"
-      ]
+      ],
+      howToUse: {
+        instructions: "Temper in hot oil/ghee to release its earthy aroma, add whole seeds to savory breads, or brew as a digestive cumin tea.",
+        images: [
+          "/assets/products/cumin-seeds/Cumin-Seed.webp",
+          "/assets/products/cumin-seeds/cumin-farm.jpg",
+          "/assets/products/cumin-seeds/cumin-processing.jpg",
+          "/assets/products/cumin-seeds/cumin-applications.jpg",
+          "/assets/products/cumin-seeds/Cumin-Seed.webp"
+        ]
+      }
     },
     {
       id: 5,
-      name: "Banana Fiber",
-      category: "textiles",
-      mainImage: "/assets/products/banana-fiber/Banana-Fiber.webp",
+      name: "Bagasse Cutlery",
+      category: "eco-friendly",
+      mainImage: "/assets/products/bagasse-cutlery/bagasse-main.png",
       gallery: [
-        "/assets/products/banana-fiber/banana-fiber-extraction.jpg",
-        "/assets/products/banana-fiber/banana-fiber-products.jpg",
-        "/assets/products/banana-fiber/banana-fiber-sustainable.jpg"
+        "/assets/products/bagasse-cutlery/bagasse-set.png",
+        "/assets/products/bagasse-cutlery/bagasse-compostable.png",
+        "/assets/products/bagasse-cutlery/bagasse-close-up.png"
       ],
-      description: "Sustainable banana fiber extracted from banana plant stems, perfect for eco-friendly textiles and handicrafts. Our banana fiber is processed using traditional methods that support rural artisans.",
-      longDescription: "Banana fiber is extracted from the stems of banana plants, a byproduct of banana cultivation. This sustainable fiber is processed using traditional methods that have been passed down through generations. The fiber is strong, durable, and completely biodegradable, making it an excellent eco-friendly alternative to synthetic fibers.",
+      description: "Sugarcane byproduct-based cutlery sets including spoons, forks, and knives. A 100% natural, biodegradable, and compostable alternative to traditional plastic cutlery.",
+      longDescription: "Our Bagasse Cutlery is manufactured from the fibrous residue left after sugarcane stalks are crushed to extract their juice. This byproduct, known as bagasse, is processed with high-heat molding to create sturdy, functional, and aesthetically pleasing cutlery. Unlike plastic or even some wooden alternatives, bagasse cutlery is fully compostable within 90 days in commercial facilities, leaving no toxic residue. It is exceptionally sturdy, heat-resistant, and oil-proof, making it suitable for both hot and cold food applications in premium catering, restaurants, and outdoor events.",
+      isEcoFriendly: true,
       details: {
-        origin: "Kerala & Karnataka, India",
-        processing: "Extracted and processed",
-        packaging: "Customized packaging",
-        certifications: ["Organic", "Fair Trade", "Eco-friendly", "Handmade"],
-        applications: ["Textiles", "Handicrafts", "Paper", "Ropes", "Bags", "Home decor"],
+        origin: "South India",
+        processing: "High-heat compression molding from sugarcane pulp",
+        packaging: "Customized eco-friendly bulk packaging",
+        certifications: ["ISO 22000:2025", "FSSAI", "EN 13432 (Compostability)", "FDA Food Grade"],
+        applications: ["Sustainable catering", "High-end events", "Takeaway services", "Eco-conscious hospitality", "Quick-service restaurants"],
         specifications: {
-          fiberLength: "2-4 meters",
-          tensileStrength: "High",
-          color: "Natural cream to brown",
-          sustainability: "100% biodegradable",
-          texture: "Smooth and soft",
-          durability: "Long-lasting"
+          material: "100% Sugarcane Bagasse",
+          sturdiness: "Extra reinforced tensile strength",
+          temperatureResistance: "-20°C to 120°C",
+          sustainability: "100% biodegradable and compostable",
+          chemicalFree: "No chlorine or bleach",
+          foodSafety: "BPA-free and non-toxic"
         },
         environmentalInfo: {
-          biodegradability: "100%",
-          carbonFootprint: "Minimal",
-          waterUsage: "Low",
-          pesticideFree: "Yes",
-          renewable: "Yes"
+          biodegradability: "100% within 90 days",
+          carbonFootprint: "70% lower than plastic",
+          waterUsage: "Low (recycled in plant)",
+          chemicalFree: "Yes",
+          renewableSource: "Sugarcane (annual crop)"
         }
       },
       features: [
-        "100% biodegradable",
-        "Sustainable alternative to synthetic fibers",
-        "Strong and durable",
-        "Supports rural artisans",
-        "Natural and eco-friendly",
-        "Traditional processing methods"
+        "Sourced from 100% renewable sugarcane fiber",
+        "Completely biodegradable and compostable",
+        "Microwave-safe and freezer-friendly",
+        "Sturdy design—won't break or bend easily",
+        "Oil and water resistant without synthetic coatings",
+        "No chemical leaching during use"
       ],
       benefits: [
-        "Environmental sustainability",
-        "Supports local communities",
-        "Reduces plastic waste",
-        "Natural and hypoallergenic",
-        "Promotes traditional crafts"
-      ]
+        "Reduces single-use plastic pollution",
+        "Provides a premium, natural look for dining",
+        "Superior heat and oil resistance",
+        "Cost-effective sustainable solution",
+        "Safe for all types of food consumption",
+        "Supports a circular economy by using agricultural waste"
+      ],
+      howToUse: {
+        instructions: "Ideal for eco-friendly catering, high-end events, takeaways, and a sustainable home dining experience. Microwave and freezer safe.",
+        images: [
+          "/assets/products/bagasse-cutlery/bagasse-main.png",
+          "/assets/products/bagasse-cutlery/bagasse-set.png",
+          "/assets/products/bagasse-cutlery/bagasse-compostable.png",
+          "/assets/products/bagasse-cutlery/bagasse-close-up.png",
+          "/assets/products/bagasse-cutlery/bagasse-main.png"
+        ]
+      }
     },
     {
       id: 6,
@@ -561,7 +639,17 @@ const ProductDetails = () => {
         "Eco-friendly and sustainable",
         "Supports rural livelihoods",
         "Perfect for gifts and collections"
-      ]
+      ],
+      howToUse: {
+        instructions: "Perfect for educational storytelling with children, as premium heritage-style home decor, or as a thoughtful gift for special occasions and cultural celebrations.",
+        images: [
+          "/assets/products/kondapalli-toys/Kondapalli-Toys.webp",
+          "/assets/products/kondapalli-toys/kondapalli-toys-1.jpg",
+          "/assets/products/kondapalli-toys/kondapalli-toys-2.jpg",
+          "/assets/products/kondapalli-toys/kondapalli-toys-3.jpg",
+          "/assets/products/kondapalli-toys/Kondapalli-Toys.webp"
+        ]
+      }
     },
     {
       id: 7,
@@ -838,6 +926,28 @@ const ProductDetails = () => {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Use Section */}
+        <section className="py-8 sm:py-12 lg:py-16 bg-background border-t border-border">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6 text-center">How to Use</h2>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto text-center">
+              {product.howToUse.instructions}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
+              {product.howToUse.images.map((img, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-xl aspect-square shadow-md hover:shadow-xl transition-all duration-500 bg-muted">
+                  <img 
+                    src={img} 
+                    alt={`Using ${product.name} ${index + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                </div>
+              ))}
             </div>
           </div>
         </section>

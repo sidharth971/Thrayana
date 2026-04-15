@@ -25,13 +25,13 @@ const STORAGE_KEY = 'thrayana_blogs';
 const defaultBlogs: BlogPost[] = [
   {
     id: '1',
-    title: 'The Health Benefits of A2 Gir Cow Ghee',
-    excerpt: 'Discover why a2 gir cow ghee is considered a superfood in Ayurveda and how it can improve your daily health.',
-    content: 'A2 Gir Cow Ghee is known for its rich flavor, golden color, and traditional Ayurvedic benefits. Our ghee is produced using the traditional bilona method that preserves all natural nutrients. Regular consumption of A2 ghee supports digestive health, boosts immunity, and is rich in fat-soluble vitamins. It has anti-inflammatory properties and is highly stable for cooking at high temperatures.',
-    imageUrl: '/assets/products/a2-gir-cow-ghee/Cow Ghee_3.png',
+    title: 'The Health Benefits of Ashwagandha Root Powder',
+    excerpt: 'Discover why ashwagandha is considered a super-herb in Ayurveda and how it can improve your resilience against stress.',
+    content: 'Ashwagandha is renowned for its potent adaptogenic properties and holistic Ayurvedic benefits. Sourced from the finest root extracts, it works to naturally balance the body. Regular consumption of Ashwagandha supports stress relief, boosts cognitive health, and is highly effective at boosting immunity. It has natural anti-inflammatory properties and provides a steady source of energy without the crash.',
+    imageUrl: '/assets/products/ashwagandha/ashwagandha_main.png',
     createdAt: new Date(Date.now() - 86400000 * 5).toISOString(),
     author: 'Thrayana Experts',
-    slug: 'the-health-benefits-of-a2-gir-cow-ghee'
+    slug: 'the-health-benefits-of-ashwagandha-root-powder'
   },
   {
     id: '2',

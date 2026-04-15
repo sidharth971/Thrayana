@@ -21,7 +21,7 @@ A modern React website showcasing S2 Overseas export products including spices, 
 ## 📦 Products Featured
 
 - **Spices**: Turmeric Powder, Red Chilli Powder, Cumin Seed
-- **Processed Foods**: Banana Powder, Banana Fiber
+- **Processed Foods**: Banana Powder, Bagasse Cutlery
 - **Handicrafts**: Kondapalli Toys
 
 ## 🚀 Deployment

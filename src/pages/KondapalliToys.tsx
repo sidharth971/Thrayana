@@ -284,6 +284,34 @@ const KondapalliToys = () => {
           </div>
         </section>
 
+        {/* How to Use Section */}
+        <section className="py-12 sm:py-16 bg-background border-t border-border">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6 text-center">How to Use</h2>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto text-center">
+              Our Kondapalli toys are perfect for educational storytelling with children, serving as premium heritage-style home decor, or as a thoughtful gift for special occasions and cultural celebrations.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 px-4 sm:px-0">
+              {[
+                { src: "/assets/products/kondapalli-toys/Kondapalli-Toys.webp", alt: "Kondapalli Toy Decor" },
+                { src: "/assets/products/kondapalli-toys/kondapalli-toys-1.jpg", alt: "Traditional Toy" },
+                { src: "/assets/products/kondapalli-toys/kondapalli-toys-2.jpg", alt: "Artisan Work" },
+                { src: "/assets/products/kondapalli-toys/kondapalli-toys-3.jpg", alt: "Educational Storytelling" },
+                { src: "/assets/products/kondapalli-toys/Kondapalli-Toys.webp", alt: "Heritage Gift" }
+              ].map((img, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-xl aspect-square shadow-md hover:shadow-xl transition-all duration-500 bg-muted">
+                  <img 
+                    src={img.src} 
+                    alt={img.alt} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="py-12 sm:py-16 lg:py-20 bg-card/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
