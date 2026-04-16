@@ -93,7 +93,7 @@ const ProductsSection = () => {
                 <div className="mb-4 sm:mb-6 overflow-hidden rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 bg-white">
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={`Premium ${product.name} - Wholesale Export Quality India`}
                     className="w-full h-48 sm:h-56 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => { e.currentTarget.src = "/assets/products/Gemini_Generated_Image_4b6i9r4b6i9r4b6i.png"; }}
                   />

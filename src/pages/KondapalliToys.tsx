@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,8 +65,32 @@ const KondapalliToys = () => {
     certification: "GI Tag, Traditional Craft"
   };
 
+  const toysSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Traditional Kondapalli Toys",
+    "image": "https://www.thrayana.com/assets/products/kondapalli-toys/Kondapalli-Toys.webp",
+    "description": "Authentic, handcrafted Kondapalli toys made from soft wood and non-toxic paints. Traditional Indian heritage handicrafts.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Kondapalli Artisans"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Thrayana Private Limited"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Kondapalli Toys | Traditional Indian Handcrafted Wooden Toys | Thrayana</title>
+        <meta name="description" content="Discover the magic of Kondapalli Toys. Handcrafted wooden toys with the Geographical Indication (GI) tag, made by traditional artisans from Andhra Pradesh." />
+        <link rel="canonical" href="https://www.thrayana.com/kondapalli-toys" />
+        <script type="application/ld+json">
+          {JSON.stringify(toysSchema)}
+        </script>
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24">
         {/* Hero Section */}

@@ -68,7 +68,7 @@ const HeroSection = () => {
                   >
                     <img
                       src={image}
-                      alt={`Product ${index + 1}`}
+                      alt={`${["Ashwagandha Root Powder", "Wild Forest Honey", "Kondapalli Traditional Toys", "Sustainable Bagasse Cutlery", "Organic Moringa Powder"][index]} - Premium Export Quality`}
                       className="w-full h-full object-cover"
                     />
                   </div>

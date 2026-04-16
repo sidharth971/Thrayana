@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
@@ -339,6 +340,11 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Our Products | Premium Natural Indian Food & Spices | Thrayana</title>
+        <meta name="description" content="Explore our premium collection of 100% natural Indian food products, organic spices, and traditional handicrafts. Sourced sustainably for global export." />
+        <link rel="canonical" href="https://www.thrayana.com/products" />
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24">
         {/* Hero Section */}

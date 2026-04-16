@@ -65,14 +65,6 @@ const Footer = () => {
             <h4 className="text-xl font-bold text-white">Contact Us</h4>
             <div className="space-y-2 text-base">
               <div className="flex items-center gap-2">
-                <span className="text-primary">📞</span>
-                <span className="text-gray-300 font-medium">+91-9703164064</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-primary">📞</span>
-                <span className="text-gray-300 font-medium">+91 8310439092</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <span className="text-primary">✉️</span>
                 <span className="text-gray-300 font-medium">sales@thrayana.com</span>
               </div>

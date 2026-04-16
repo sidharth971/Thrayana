@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Users, Scale, Target, Award, Globe, Heart, Shield, TrendingUp } from "lucide-react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   // Scroll to top when component mounts
@@ -112,6 +113,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About Thrayana | Global Exporter of Authentic Indian Products</title>
+        <meta name="description" content="Learn about Thrayana's commitment to quality, sustainability, and authenticity in exporting India's finest spices, natural foods, and organic products globally." />
+        <link rel="canonical" href="https://www.thrayana.com/about" />
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24">
         {/* Hero Section */}

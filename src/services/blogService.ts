@@ -21,27 +21,26 @@ export const generateSlug = (text: string): string => {
 
 const STORAGE_KEY = 'thrayana_blogs';
 
-// Initial dummy data to populate the blog if it's empty
 const defaultBlogs: BlogPost[] = [
   {
     id: '1',
-    title: 'The Health Benefits of Ashwagandha Root Powder',
-    excerpt: 'Discover why ashwagandha is considered a super-herb in Ayurveda and how it can improve your resilience against stress.',
-    content: 'Ashwagandha is renowned for its potent adaptogenic properties and holistic Ayurvedic benefits. Sourced from the finest root extracts, it works to naturally balance the body. Regular consumption of Ashwagandha supports stress relief, boosts cognitive health, and is highly effective at boosting immunity. It has natural anti-inflammatory properties and provides a steady source of energy without the crash.',
-    imageUrl: '/assets/products/ashwagandha/ashwagandha_main.png',
+    title: 'How to Import Organic Moringa Powder from India: A Complete Guide',
+    excerpt: 'A comprehensive step-by-Step guide for bulk buyers on sourcing, quality standards, HSN codes, and shipping logistics for Indian Moringa.',
+    content: 'Importing Moringa powder from India requires a clear understanding of quality certifications and export logistics. As a leading bulk supplier, Thrayana Pvt Ltd ensures each batch meets international standards (FSSAI, ISO 22000). The process begins with sourcing from certified farms in Tamil Nadu, followed by shade-drying and fine grinding to preserve nutritional integrity. Key export details include HSN Code 1211.90.92, standard packaging in 25kg vacuum-sealed bags, and logistics through major ports like Chennai or Mundra. This guide covers documentation including certificate of origin, phytosanitary certificates, and lab test reports essential for smooth global trade.',
+    imageUrl: '/assets/products/moringa-powder/moringa-leaves-harvest.jpg',
     createdAt: new Date(Date.now() - 86400000 * 5).toISOString(),
-    author: 'Thrayana Experts',
-    slug: 'the-health-benefits-of-ashwagandha-root-powder'
+    author: 'Thrayana Export Team',
+    slug: 'how-to-import-moringa-powder-from-india'
   },
   {
     id: '2',
-    title: 'Why Choose Wild Forest Honey?',
-    excerpt: 'Learn about the difference between regular honey and wild forest honey sourced from the pristine forests of India.',
-    content: 'Pure wild forest honey collected from natural beehives in pristine forest areas represents nature at its finest. Unlike commercially processed honey, our wild forest honey is raw, unfiltered, and unprocessed to preserve all natural nutrients and medicinal properties. It is rich in antioxidants, flavonoids, and natural antibacterial properties. The natural crystallization process is a testament to its purity.',
-    imageUrl: '/assets/products/wild-forest-honey/honey_4.png',
+    title: 'Wholesale Market Analysis: Ashwagandha Root Powder Trends 2026',
+    excerpt: 'Analyze the rising global demand for Indian Ashwagandha, HSN code classifications, and wholesale market pricing drivers for 2026.',
+    content: 'The global demand for Indian Ashwagandha (Withania somnifera) is reaching unprecedented levels as manufacturers in the USA and Europe integrate this adaptogen into functional foods and supplements. At Thrayana, we monitor market trends to provide our wholesale partners with competitive pricing and steady supply chains. Classified under HSN 1211.90.19, Ashwagandha powder is priced based on Withanolide concentration (typically 2.5% to 5%). Strategic sourcing from Rajasthan allows us to offer premium organic root powder that complies with GMP and organic standards. This report explores why bulk buyers are shifting towards direct farm-to-warehouse partnerships for consistent quality assurance.',
+    imageUrl: '/assets/products/ashwagandha/ashwagandha_main.png',
     createdAt: new Date(Date.now() - 86400000 * 2).toISOString(),
-    author: 'Thrayana Experts',
-    slug: 'why-choose-wild-forest-honey'
+    author: 'Thrayana Market Strategy',
+    slug: 'ashwagandha-root-powder-export-trends-2026'
   }
 ];
 

@@ -3,9 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Send, Loader2, Globe2, ShieldCheck, Clock, Phone, Mail } from "lucide-react";
+import { Send, Loader2, Globe2, ShieldCheck, Clock, Mail } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from '@emailjs/browser';
 
@@ -160,6 +161,11 @@ const Contact = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>Contact Thrayana | Get a Quotation for Premium Export Products</title>
+        <meta name="description" content="Contact Thrayana for bulk enquiries, product catalogs, and quotations. We are your reliable partner for premium Ashwagandha, Honey, Spices, and natural food exports." />
+        <link rel="canonical" href="https://www.thrayana.com/contact" />
+      </Helmet>
       <Header />
       <Toaster position="top-center" toastOptions={{ duration: 4000, style: { background: '#363636', color: '#fff' } }} />
 
@@ -207,7 +213,7 @@ const Contact = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="w-full max-w-7xl mx-auto">
             {/* Contact Information Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 items-stretch">
               {/* Office Address */}
               <div className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-blue-200 to-purple-200 h-full">
                 <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5 h-full flex flex-col">
@@ -226,21 +232,6 @@ const Contact = () => {
                 </div>
                 {/* gradient glow under card */}
                 <div className="pointer-events-none absolute -bottom-4 left-8 right-8 h-4 rounded-full bg-gradient-to-r from-blue-300/60 to-purple-300/60 blur-md opacity-80" />
-              </div>
-
-              {/* Phone Numbers */}
-              <div className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-green-200 to-blue-200 h-full">
-                <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5 h-full flex flex-col">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                    <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">Phone Numbers</h3>
-                  <div className="space-y-2">
-                    <a href="tel:+919703164064" className="inline-block text-sm sm:text-base text-gray-700 font-medium hover:text-blue-600 transition-colors">+91-9703164064</a> <br />
-                    <a href="tel:+918310439092" className="inline-block text-sm sm:text-base text-gray-700 font-medium hover:text-blue-600 transition-colors">+91 8310439092</a>
-                  </div>
-                </div>
-                <div className="pointer-events-none absolute -bottom-4 left-8 right-8 h-4 rounded-full bg-gradient-to-r from-green-300/60 to-blue-300/60 blur-md opacity-80" />
               </div>
 
               {/* Email Addresses */}
@@ -477,6 +468,23 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+        {/* Google Map Section */}
+        <div className="w-full mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
+          <div className="w-full max-w-7xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 animate-in fade-in duration-1000 delay-500">
+              <iframe 
+                src="https://maps.google.com/maps?q=Ittina%20Housing%20Ltd,%20Electronics%20City,%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="450" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Office Location"
+              />
+            </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

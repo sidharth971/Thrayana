@@ -5,7 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { Truck, Package, Anchor, Zap, ShieldCheck, Globe } from "lucide-react";
 
 const ProductDetails = () => {
   const { productName } = useParams();
@@ -58,8 +60,16 @@ const ProductDetails = () => {
         "/assets/products/ashwagandha/ashwagandha_gallery_2.png",
         "/assets/products/ashwagandha/ashwagandha_gallery_3.png"
       ],
-      description: "Premium organic Ashwagandha root powder, a powerful adaptogen known for stress relief, boosting immunity, and improving overall vitality. Sustainably harvested and finely ground.",
-      longDescription: "Our premium Ashwagandha Root Powder is sourced from the finest organic farms in Rajasthan, India. Known as the 'King of Ayurvedic Herbs', Ashwagandha is a powerful adaptogen that helps the body manage stress, enhances cognitive function, and promotes overall vitality. The roots are carefully hand-harvested, sun-dried, and finely ground at low temperatures to ensure the maximum retention of active compounds, particularly withanolides. Regular consumption supports a balanced mood, restful sleep, and a robust immune system.",
+      description: "Bulk Ashwagandha Root Powder Exporter India. Premium organic adaptogen known for stress relief and immunity. Sourced from Rajasthan and processed for global wholesale markets.",
+      longDescription: "Thrayana Pvt Ltd is a leading bulk supplier of premium Ashwagandha Root Powder from India. Sourced from the finest organic farms in Rajasthan, our Ashwagandha is a powerful adaptogen that meets stringent international quality standards. The roots are carefully hand-harvested, sun-dried, and finely ground at low temperatures to ensure maximum retention of withanolides (2.5% - 5%). We cater to global pharmaceutical, nutraceutical, and functional food manufacturers with reliable supply chains and comprehensive certifications.",
+      exportDetails: {
+        hsnCode: "1211.90.19",
+        moq: "1000 KG",
+        packaging: "25kg / 50kg Kraft Paper Bags / Fiber Drums",
+        leadTime: "10-15 Days",
+        portOfLoading: "Mundra / JNPT, India",
+        supplyAbility: "100 Metric Tons per Month"
+      },
       details: {
         origin: "Rajasthan, India",
         processing: "Sun-dried and finely ground",
@@ -127,8 +137,16 @@ const ProductDetails = () => {
         "/assets/products/wild-forest-honey/honey_3.png",
         "/assets/products/wild-forest-honey/honey_1.png"
       ],
-      description: "Pure wild forest honey collected from natural beehives in pristine forest areas, known for its rich flavor, natural sweetness, and numerous health benefits. Our honey is raw, unfiltered, and unprocessed to preserve all natural nutrients and medicinal properties.",
-      longDescription: "Our premium Wild Forest Honey is sourced from the pristine forests of the Western Ghats in India, where bees collect nectar from a diverse range of wildflowers, medicinal plants, and forest flora including neem, tulsi, jamun, and other indigenous species. This natural diversity gives our honey its unique flavor profile, rich nutritional content, and exceptional medicinal properties. The honey is collected using traditional methods that ensure minimal processing, preserving all natural enzymes, antioxidants, beneficial compounds, and pollen grains. Our forest honey undergoes natural fermentation and contains live enzymes that provide numerous health benefits. The Western Ghats region is a UNESCO World Heritage Site known for its biodiversity, making our honey a truly premium natural product.",
+      description: "Wholesale Wild Forest Honey Supplier India. Pure raw honey collected from natural beehives in Western Ghats. Unfiltered and unprocessed for maximum medicinal properties.",
+      longDescription: "Thrayana Pvt Ltd exports high-quality Wild Forest Honey sourced from the pristine Western Ghats of India. Collected using traditional, sustainable methods from wild beehives, our honey is raw, unfiltered, and unprocessed, ensuring a high concentration of live enzymes, antioxidants, and pollen. We provide bulk honey solutions to global food processors and health supplement brands, maintaining complete traceability and purity standards.",
+      exportDetails: {
+        hsnCode: "0409.00.00",
+        moq: "1000 KG",
+        packaging: "30kg Carbous / 300kg Food-grade Drums",
+        leadTime: "15-20 Days",
+        portOfLoading: "Chennai / JNPT, India",
+        supplyAbility: "50 Metric Tons per Month"
+      },
       details: {
         origin: "Western Ghats, India",
         processing: "Raw, unfiltered, unprocessed",
@@ -227,8 +245,16 @@ const ProductDetails = () => {
         "/assets/products/banana-powder/banana-powder-packaging.jpg",
         "/assets/products/banana-powder/banana-powder-application.jpg"
       ],
-      description: "Premium dehydrated banana powder made from carefully selected ripe bananas, perfect for food processing and nutritional supplements. Our banana powder is produced using state-of-the-art dehydration technology that preserves the natural nutrients and flavor of fresh bananas.",
-      longDescription: "Our premium banana powder is sourced from the finest Cavendish bananas grown in the fertile regions of Kerala. The bananas are carefully selected at peak ripeness to ensure maximum nutritional value and natural sweetness. The dehydration process removes moisture while preserving essential nutrients, making it an ideal ingredient for various food applications.",
+      description: "Bulk Banana Powder Exporter India. 100% natural dehydrated banana powder made from premium Cavendish bananas. Ideal for food processing and infant nutrition.",
+      longDescription: "As a premier exporter of banana powder from India, Thrayana Pvt Ltd provides processed fruit solutions for global food manufacturers. Our banana powder is made from carefully selected ripe Cavendish bananas from Kerala, processed using advanced dehydration technology that preserves natural flavor and potassium content. Perfect for bakery, baby food, and nutritional supplement industries.",
+      exportDetails: {
+        hsnCode: "1106.30.10",
+        moq: "1000 KG",
+        packaging: "25kg LDPE Lined Kraft Paper Bags",
+        leadTime: "12-15 Days",
+        portOfLoading: "Cochin / Tuticorin, India",
+        supplyAbility: "200 Metric Tons per Month"
+      },
       details: {
         origin: "Kerala, India",
         processing: "Dehydrated and finely ground",
@@ -289,8 +315,16 @@ const ProductDetails = () => {
         "/assets/products/moringa-powder/moringa-powder-packaging.jpg",
         "/assets/products/moringa-powder/moringa-powder-application.jpg"
       ],
-      description: "Nutrient-rich moringa powder made from shade-dried moringa leaves, perfect for health supplements and food fortification.",
-      longDescription: "Our moringa powder is made from carefully selected moringa leaves, shade-dried to preserve nutrients and finely ground to a vibrant green powder. Moringa is known as the 'miracle tree' for its exceptional nutritional profile, including high levels of protein, vitamins, minerals, and antioxidants. It is ideal for boosting immunity, supporting energy, and fortifying foods and beverages.",
+      description: "Moringa Powder Bulk Supplier India. Nutrient-rich organic moringa leaf powder, shade-dried and finely ground. Wholesale supplier for health supplements.",
+      longDescription: "Thrayana Pvt Ltd specializes in the bulk export of Organic Moringa Leaf Powder from Tamil Nadu, India. Known as a 'superfood', our moringa is shade-dried to preserve its vibrant green color and high vitamin/mineral profile. We supply global wholesalers and supplement manufacturers with top-grade powder that meets international safety and purity standards.",
+      exportDetails: {
+        hsnCode: "1211.90.92",
+        moq: "1000 KG",
+        packaging: "10kg / 25kg Vacuum Sealed HDPE Bags",
+        leadTime: "10-14 Days",
+        portOfLoading: "Chennai / Mundra, India",
+        supplyAbility: "150 Metric Tons per Month"
+      },
       details: {
         origin: "Tamil Nadu, India",
         processing: "Shade-dried and finely ground",
@@ -725,8 +759,64 @@ const ProductDetails = () => {
     );
   }
 
+  const schemaData = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": [
+      `https://www.thrayana.com${product.mainImage}`,
+      ...product.gallery.map(img => `https://www.thrayana.com${img}`)
+    ],
+    "description": product.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Thrayana"
+    },
+    "category": product.category,
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Thrayana Private Limited"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.thrayana.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.thrayana.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `https://www.thrayana.com/products/${product.name.replace(/\s+/g, '-')}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${product.name} Bulk Exporter from India | Thrayana Pvt Ltd`}</title>
+        <meta name="description" content={product.description} />
+        <link rel="canonical" href={`https://www.thrayana.com/products/${product.name.replace(/\s+/g, '-')}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24">
         {/* Breadcrumb */}
@@ -751,7 +841,7 @@ const ProductDetails = () => {
                 <div className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src={product.mainImage}
-                    alt={product.name}
+                    alt={`Premium ${product.name} - Wholesale Export Quality India`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -760,7 +850,7 @@ const ProductDetails = () => {
                     <div key={index} className="aspect-square rounded-lg overflow-hidden shadow-md">
                       <img
                         src={image}
-                        alt={`${product.name} ${index + 1}`}
+                        alt={`${product.name} Detail View - Quality Standard ${index + 1}`}
                         className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                       />
                     </div>
@@ -796,6 +886,48 @@ const ProductDetails = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* Export Specifications - CRITICAL FOR BUYERS */}
+                <div className="bg-gradient-to-br from-indigo-50 to-blue-50 border border-blue-100 rounded-xl p-5 sm:p-6 shadow-sm">
+                  <h3 className="text-lg sm:text-xl font-bold text-blue-900 mb-4 flex items-center">
+                    <Globe className="w-5 h-5 mr-2 text-blue-600" />
+                    Export Specifications
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex items-start space-x-3">
+                      <Zap className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider">HSN Code</div>
+                        <div className="text-sm sm:text-base font-bold text-gray-900">{product.exportDetails?.hsnCode || "Contact for details"}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Anchor className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider">MOQ (Bulk)</div>
+                        <div className="text-sm sm:text-base font-bold text-gray-900">{product.exportDetails?.moq || "1000 KG"}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Package className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider">Standard Packaging</div>
+                        <div className="text-sm sm:text-base font-bold text-gray-900">{product.exportDetails?.packaging || "Bulk Packaging"}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Truck className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider">Port of Loading</div>
+                        <div className="text-sm sm:text-base font-bold text-gray-900">{product.exportDetails?.portOfLoading || "Major Indian Ports"}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-blue-100 flex items-center text-blue-800 font-medium text-xs sm:text-sm">
+                    <ShieldCheck className="w-4 h-4 mr-2" />
+                    Certified Export Quality: {product.details.certifications.join(", ")}
+                  </div>
                 </div>
 
                 {/* Quick Specs */}
