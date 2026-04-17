@@ -225,9 +225,9 @@ const Contact = () => {
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">Office Address</h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                    Ittina Housing Ltd, A blk, SY No 5/23,46,47,48,<br />
-                    Electronics City, Bangalore South,<br />
-                    Bangalore - 560100, India
+                    A516, Ittina Neela Apartments, Phase 2,<br />
+                    Glass Factory Layout, Electronic City,<br />
+                    Bengaluru, Karnataka - 560100, India
                   </p>
                 </div>
                 {/* gradient glow under card */}
@@ -471,16 +471,20 @@ const Contact = () => {
         {/* Google Map Section */}
         <div className="w-full mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
           <div className="w-full max-w-7xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Visit Our Office</h2>
+              <p className="text-gray-600 mt-2">Find us in the heart of Electronics City, Bangalore</p>
+            </div>
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 animate-in fade-in duration-1000 delay-500">
               <iframe 
-                src="https://maps.google.com/maps?q=Ittina%20Housing%20Ltd,%20Electronics%20City,%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.194496016373!2d77.69882387677787!3d12.830704917948118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6d64709bbed9%3A0x2730d8c309c0ebee!2sThrayana%20Private%20Limited!5e0!3m2!1sen!2sin!4v1776417728202!5m2!1sen!2sin" 
                 width="100%" 
                 height="450" 
                 style={{ border: 0 }} 
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location"
+                title="Thrayana Private Limited Office Location"
               />
             </div>
           </div>

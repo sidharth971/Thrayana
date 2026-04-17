@@ -114,7 +114,7 @@ const Products = () => {
       category: "natural-foods",
       image: "/assets/products/moringa-powder/moringa-leaves-harvest.jpg",
       newImage: "/assets/products/moringa-powder/moringa-powder-packaging.jpg",
-      description: "Nutrient-rich 100% natural moringa powder made from shade-dried moringa leaves, perfect for health supplements and natural food fortification.",
+      description: "Organic Moringa Powder Export from India. High-quality nutrient-rich moringa leaf powder, perfect for global health supplements and nutraceutical markets.",
       details: {
         origin: "Tamil Nadu, India",
         processing: "Shade-dried and finely ground",

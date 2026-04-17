@@ -315,8 +315,8 @@ const ProductDetails = () => {
         "/assets/products/moringa-powder/moringa-powder-packaging.jpg",
         "/assets/products/moringa-powder/moringa-powder-application.jpg"
       ],
-      description: "Moringa Powder Bulk Supplier India. Nutrient-rich organic moringa leaf powder, shade-dried and finely ground. Wholesale supplier for health supplements.",
-      longDescription: "Thrayana Pvt Ltd specializes in the bulk export of Organic Moringa Leaf Powder from Tamil Nadu, India. Known as a 'superfood', our moringa is shade-dried to preserve its vibrant green color and high vitamin/mineral profile. We supply global wholesalers and supplement manufacturers with top-grade powder that meets international safety and purity standards.",
+      description: "Primary Moringa Powder Export from India. Premium grade nutrient-rich organic moringa leaf powder, shade-dried to retain maximum nutritional value. Top wholesale supplier for supplement manufacturers globally.",
+      longDescription: "Thrayana Pvt Ltd is a premier destination for Moringa Powder Export from India. Our organic Moringa leaf powder is sourced from sustainable farms in Tamil Nadu and processed under strict quality controls. As a leading bulk supplier, we ensure our shade-dried moringa retains its vibrant green color and high protein, vitamin, and mineral density. We cater to international wholesalers, health brands, and food manufacturers looking for high-quality Indian moringa with reliable export logistics and full certification compliance.",
       exportDetails: {
         hsnCode: "1211.90.92",
         moq: "1000 KG",
@@ -807,7 +807,7 @@ const ProductDetails = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{`${product.name} Bulk Exporter from India | Thrayana Pvt Ltd`}</title>
+        <title>{product.name === "Moringa Powder" ? "Moringa Powder Export from India | Bulk Supplier | Thrayana" : `${product.name} Bulk Exporter from India | Thrayana Pvt Ltd`}</title>
         <meta name="description" content={product.description} />
         <link rel="canonical" href={`https://www.thrayana.com/products/${product.name.replace(/\s+/g, '-')}`} />
         <script type="application/ld+json">

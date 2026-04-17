@@ -24,8 +24,8 @@ const STORAGE_KEY = 'thrayana_blogs';
 const defaultBlogs: BlogPost[] = [
   {
     id: '1',
-    title: 'How to Import Organic Moringa Powder from India: A Complete Guide',
-    excerpt: 'A comprehensive step-by-Step guide for bulk buyers on sourcing, quality standards, HSN codes, and shipping logistics for Indian Moringa.',
+    title: 'Moringa Powder Export from India: Comprehensive Guide for Bulk Buyers',
+    excerpt: 'Detailed guide on how to facilitate Moringa Powder Export from India. Covering quality standards, HSN codes (1211.90.92), bulk sourcing, and shipping logistics.',
     content: 'Importing Moringa powder from India requires a clear understanding of quality certifications and export logistics. As a leading bulk supplier, Thrayana Pvt Ltd ensures each batch meets international standards (FSSAI, ISO 22000). The process begins with sourcing from certified farms in Tamil Nadu, followed by shade-drying and fine grinding to preserve nutritional integrity. Key export details include HSN Code 1211.90.92, standard packaging in 25kg vacuum-sealed bags, and logistics through major ports like Chennai or Mundra. This guide covers documentation including certificate of origin, phytosanitary certificates, and lab test reports essential for smooth global trade.',
     imageUrl: '/assets/products/moringa-powder/moringa-leaves-harvest.jpg',
     createdAt: new Date(Date.now() - 86400000 * 5).toISOString(),
