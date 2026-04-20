@@ -105,5 +105,24 @@ export const blogService = {
     const blogs = blogService.getBlogs();
     const updatedBlogs = blogs.filter(blog => blog.id !== id);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedBlogs));
+  },
+
+  updateBlog: (id: string, blogData: Partial<BlogPost>): BlogPost | undefined => {
+    const blogs = blogService.getBlogs();
+    const index = blogs.findIndex(blog => blog.id === id);
+    
+    if (index === -1) return undefined;
+    
+    const updatedBlog = {
+      ...blogs[index],
+      ...blogData,
+      slug: blogData.title ? generateSlug(blogData.title) : blogs[index].slug
+    };
+    
+    const updatedBlogs = [...blogs];
+    updatedBlogs[index] = updatedBlog;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedBlogs));
+    
+    return updatedBlog;
   }
 };

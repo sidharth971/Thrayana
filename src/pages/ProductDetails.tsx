@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Truck, Package, Anchor, Zap, ShieldCheck, Globe } from "lucide-react";
+import TrustSection from "@/components/TrustSection";
 
 const ProductDetails = () => {
   const { productName } = useParams();
@@ -60,13 +61,13 @@ const ProductDetails = () => {
         "/assets/products/ashwagandha/ashwagandha_gallery_2.png",
         "/assets/products/ashwagandha/ashwagandha_gallery_3.png"
       ],
-      description: "Bulk Ashwagandha Root Powder Exporter India. Premium organic adaptogen known for stress relief and immunity. Sourced from Rajasthan and processed for global wholesale markets.",
-      longDescription: "Thrayana Pvt Ltd is a leading bulk supplier of premium Ashwagandha Root Powder from India. Sourced from the finest organic farms in Rajasthan, our Ashwagandha is a powerful adaptogen that meets stringent international quality standards. The roots are carefully hand-harvested, sun-dried, and finely ground at low temperatures to ensure maximum retention of withanolides (2.5% - 5%). We cater to global pharmaceutical, nutraceutical, and functional food manufacturers with reliable supply chains and comprehensive certifications.",
+      description: "Premium A-Grade Ashwagandha Root Powder Exporter from India. Standardized 2.5% - 5% withanolide content, sourced from the Nagaur region of Rajasthan. Ideal for high-potency Ayurvedic supplement exports.",
+      longDescription: "Thrayana Pvt Ltd is a specialized Ashwagandha Root Powder Exporter from India, sourcing directly from the premium farm clusters of Rajasthan, particularly the Nagaur region, which is renowned for producing the highest quality Withania somnifera. Our Ashwagandha roots are harvested using traditional methods and undergo a natural sun-drying process that preserves the structural integrity of the active alkaloid compounds. We focus on providing our B2B partners with 'A-Grade' root powder, characterized by its distinctively uniform beige color and potent adaptogenic profiles. Each bulk batch is standardized to contain 2.5% to 5% withanolides, ensuring the efficacy required by global nutraceutical and dietary supplement manufacturers. We ensure a deep 100-mesh fine powder through advanced milling, supported by full Certificate of Analysis (COA) compliance for heavy metals and microbial limits.",
       exportDetails: {
-        hsnCode: "1211.90.19",
-        moq: "1000 KG",
-        packaging: "25kg / 50kg Kraft Paper Bags / Fiber Drums",
-        leadTime: "10-15 Days",
+        hsnCode: "1211.90.22",
+        moq: "500 KG",
+        packaging: "25kg High-Density Polyethylene (HDPE) Drums / Vacuum Bags",
+        leadTime: "15-20 Days",
         portOfLoading: "Mundra / JNPT, India",
         supplyAbility: "100 Metric Tons per Month"
       },
@@ -137,65 +138,44 @@ const ProductDetails = () => {
         "/assets/products/wild-forest-honey/honey_3.png",
         "/assets/products/wild-forest-honey/honey_1.png"
       ],
-      description: "Wholesale Wild Forest Honey Supplier India. Pure raw honey collected from natural beehives in Western Ghats. Unfiltered and unprocessed for maximum medicinal properties.",
-      longDescription: "Thrayana Pvt Ltd exports high-quality Wild Forest Honey sourced from the pristine Western Ghats of India. Collected using traditional, sustainable methods from wild beehives, our honey is raw, unfiltered, and unprocessed, ensuring a high concentration of live enzymes, antioxidants, and pollen. We provide bulk honey solutions to global food processors and health supplement brands, maintaining complete traceability and purity standards.",
+      description: "Wholesale Wild Forest Honey Exporter India. 100% raw, unfiltered, and unprocessed multifloral honey sourced from the pristine UNESCO World Heritage forests of the Western Ghats.",
+      longDescription: "Thrayana Pvt Ltd is a premier supplier of Wild Forest Honey from the Western Ghats, one of the most biodiverse regions in the world. Our honey is sustainably collected by local forest communities from natural beehives in deep forest clusters. This ensures that the honey is 100% raw and multifloral, carrying the unique medicinal properties of the wild flora. We provide our global wholesale partners in the food, cosmetic, and pharmaceutical industries with raw, unfiltered honey that retains its natural live enzymes, propolis, and high antioxidant concentrations. We maintain strict purity standards with full traceability and lab reports confirming zero contamination from pesticides or artificial sweeteners.",
       exportDetails: {
         hsnCode: "0409.00.00",
         moq: "1000 KG",
-        packaging: "30kg Carbous / 300kg Food-grade Drums",
+        packaging: "30kg Food-grade Carbous / 300kg Industrial Drums",
         leadTime: "15-20 Days",
         portOfLoading: "Chennai / JNPT, India",
         supplyAbility: "50 Metric Tons per Month"
       },
       details: {
         origin: "Western Ghats, India",
-        processing: "Raw, unfiltered, unprocessed",
-        packaging: "Customized packaging",
-        certifications: ["FSSAI", "Organic", "Raw Honey Certified", "Forest Honey"],
-        applications: ["Natural sweetener", "Traditional medicine", "Skincare", "Culinary uses", "Health supplements", "Wound healing"],
+        processing: "Raw, cold-unfiltered, and unprocessed",
+        packaging: "Industrial export-grade food containers",
+        certifications: ["FSSAI", "Organic Certified", "HACCP Certified", "Raw Forest Honey Certified"],
+        applications: ["Natural sweeteners", "Ayurvedic formulations", "High-end cosmetic ingredients", "Gourmet food processing", "Traditional wound care", "Health supplements"],
         specifications: {
-          moisture: "< 18%",
-          sugarContent: "80-85%",
-          color: "Golden amber to dark amber",
-          shelfLife: "Indefinite",
-          viscosity: "Medium to thick",
-          crystallization: "Natural process",
-          pH: "3.4-6.1",
-          density: "1.36-1.45 g/cm³",
-          fructose: "38-40%",
-          glucose: "31-35%",
+          moisture: "< 18% (Premium Grade)",
+          sugarContent: "80-85% (Natural Fructose/Glucose)",
+          color: "Dark Golden to Deep Amber",
+          shelfLife: "Indefinite (when sealed)",
+          fructose: "38-42%",
+          glucose: "32-35%",
           sucrose: "< 5%",
-          maltose: "7-10%",
-          waterActivity: "< 0.6",
           hydroxymethylfurfural: "< 40 mg/kg",
           diastaseActivity: "> 8 Schade units",
-          proline: "> 180 mg/kg",
-          electricalConductivity: "0.8-1.5 mS/cm",
+          proline: "> 200 mg/kg",
           ashContent: "< 0.6%",
-          insolubleMatter: "< 0.1%"
+          pH: "3.5 - 5.5"
         },
         nutritionalInfo: {
           calories: "304 kcal/100g",
-          carbohydrates: "82.4g/100g",
-          sugars: "82.1g/100g",
-          protein: "0.3g/100g",
-          fiber: "0.2g/100g",
-          sodium: "4mg/100g",
+          carbohydrates: "82g/100g",
+          sugars: "82g/100g",
+          antioxidants: "High Poly-phenolic content",
+          enzymes: "Active Diastase & Invertase",
           potassium: "52mg/100g",
-          calcium: "6mg/100g",
-          iron: "0.4mg/100g",
-          vitaminC: "0.5mg/100g",
-          magnesium: "2mg/100g",
-          phosphorus: "4mg/100g",
-          zinc: "0.2mg/100g",
-          copper: "0.04mg/100g",
-          manganese: "0.08mg/100g",
-          selenium: "0.8μg/100g",
-          riboflavin: "0.04mg/100g",
-          niacin: "0.12mg/100g",
-          pantothenicAcid: "0.07mg/100g",
-          vitaminB6: "0.02mg/100g",
-          folate: "2μg/100g"
+          calcium: "6mg/100g"
         }
       },
       features: [
@@ -370,9 +350,7 @@ const ProductDetails = () => {
         images: [
           "/assets/usage/moringa-powder/usage-1.png",
           "/assets/usage/moringa-powder/usage-2.png",
-          "/assets/usage/moringa-powder/usage-1.png",
-          "/assets/usage/moringa-powder/usage-2.png",
-          "/assets/products/moringa-powder/moringa-powder-application.jpg"
+          "/assets/usage/moringa-powder/ways-to-use.png"
         ]
       }
     },
@@ -387,16 +365,24 @@ const ProductDetails = () => {
         "/assets/products/turmeric-powder/turmeric-applications.jpg"
       ],
       description: "Premium organic turmeric powder with high curcumin content, sourced from the finest rhizomes of Karnataka and Tamil Nadu. Our turmeric is known for its vibrant color and potent medicinal properties.",
-      longDescription: "Our premium turmeric powder is sourced from the finest rhizomes grown in the fertile soils of Karnataka and Tamil Nadu. The turmeric is carefully harvested, sun-dried, and ground to preserve its natural curcumin content and vibrant golden color. This traditional spice has been used in Ayurvedic medicine for centuries.",
+      longDescription: "Thrayana Pvt Ltd is a premier Turmeric Powder Exporter from India. Our premium turmeric powder is sourced from the finest rhizomes grown in the fertile soils of Karnataka and Tamil Nadu. The turmeric is carefully harvested, sun-dried, and ground to preserve its natural curcumin content and vibrant golden color. This traditional spice has been used in Ayurvedic medicine for centuries. We provide bulk turmeric solutions to global food processors and pharmaceutical brands, ensuring high curcumin levels and microbial safety.",
+      exportDetails: {
+        hsnCode: "0910.30.30",
+        moq: "1000 KG",
+        packaging: "25kg / 50kg Multi-layer Kraft Paper Bags",
+        leadTime: "12-15 Days",
+        portOfLoading: "Chennai / Cochin, India",
+        supplyAbility: "150 Metric Tons per Month"
+      },
       details: {
         origin: "Karnataka & Tamil Nadu, India",
-        processing: "Sun-dried and ground",
-        packaging: "Customized packaging",
+        processing: "Sun-dried and finely ground",
+        packaging: "Customized export-grade packaging",
         certifications: ["ISO 22000:2025", "Organic", "FSSAI", "USDA Organic"],
         applications: ["Cooking", "Traditional medicine", "Cosmetics", "Food coloring", "Supplements", "Skincare"],
         specifications: {
-          curcumin: "3-5%",
-          moisture: "< 12%",
+          curcumin: "3% - 5% (Standardized)",
+          moisture: "< 10%",
           ash: "< 7%",
           shelfLife: "36 months",
           color: "Vibrant golden yellow",
@@ -408,7 +394,7 @@ const ProductDetails = () => {
           protein: "8g/100g",
           carbohydrates: "65g/100g",
           fiber: "21g/100g",
-          curcumin: "3-5%",
+          curcumin: "3% - 5%",
           essentialOils: "3-5%"
         }
       },
@@ -449,11 +435,19 @@ const ProductDetails = () => {
         "/assets/products/red-chilli-powder/chilli-powder-applications.jpg"
       ],
       description: "Fiery red chilli powder from the famous Guntur region, known for its intense heat and rich flavor profile. These chillies are carefully selected and processed to maintain their authentic South Indian taste.",
-      longDescription: "Guntur chillies are renowned worldwide for their exceptional heat and flavor. Grown in the fertile soils of Andhra Pradesh, these chillies are sun-dried and ground to create a powder that captures the authentic taste of South Indian cuisine. The intense heat and rich color make it perfect for traditional and modern cooking.",
+      longDescription: "Thrayana Pvt Ltd is a specialized Red Chilli Powder Exporter from India. Guntur chillies are renowned worldwide for their exceptional heat and flavor. Grown in the fertile, sun-drenched plains of Andhra Pradesh, these chillies are carefully harvested, sun-dried, and ground to create a powder that captures the authentic sting of South Indian cuisine. Our Guntur Red Chilli powder is sought after by global food manufacturers for its intense capsaicin content and deep red color.",
+      exportDetails: {
+        hsnCode: "0904.22.11",
+        moq: "1000 KG",
+        packaging: "25kg PP / Gunny Bags with Inner LDPE",
+        leadTime: "10-15 Days",
+        portOfLoading: "Vizag / Chennai, India",
+        supplyAbility: "200 Metric Tons per Month"
+      },
       details: {
         origin: "Guntur, Andhra Pradesh, India",
-        processing: "Sun-dried and ground",
-        packaging: "Customized packaging",
+        processing: "Sun-dried and fine ground",
+        packaging: "Customized export-grade packaging",
         certifications: ["ISO 22000:2025", "FSSAI", "Spice Board", "GI Tag"],
         applications: ["Cooking", "Pickles", "Sauces", "Seasoning", "Marinades", "Traditional dishes"],
         specifications: {
@@ -510,11 +504,19 @@ const ProductDetails = () => {
         "/assets/products/cumin-seeds/cumin-applications.jpg"
       ],
       description: "Premium quality cumin seeds with intense aroma and flavor, perfect for both whole and ground applications. Our cumin seeds are carefully selected and cleaned to ensure the highest quality.",
-      longDescription: "Our premium cumin seeds are sourced from the arid regions of Rajasthan and Gujarat, where the climate and soil conditions create the perfect environment for growing high-quality cumin. The seeds are carefully harvested, cleaned, and graded to ensure consistent quality and flavor.",
+      longDescription: "Thrayana Pvt Ltd is a premier Cumin Seeds Exporter from India. Our premium cumin seeds (Jeera) are sourced from the arid regions of Rajasthan and Gujarat, which are the global hubs for high-quality cumin. The seeds are carefully harvested, cleaned to 99% purity (Machine Cleaned or Sortex Cleaned), and graded to ensure consistent aroma and volatile oil content. We provide Cumin for bulk food processing and extraction industries globally.",
+      exportDetails: {
+        hsnCode: "0909.32.00",
+        moq: "1000 KG",
+        packaging: "25kg / 50kg Jute or PP Bags",
+        leadTime: "12-15 Days",
+        portOfLoading: "Mundra / JNPT, India",
+        supplyAbility: "300 Metric Tons per Month"
+      },
       details: {
         origin: "Rajasthan & Gujarat, India",
-        processing: "Cleaned and graded",
-        packaging: "Customized packaging",
+        processing: "Machine Cleaned / Sortex Cleaned (99% Purity)",
+        packaging: "Customized export packaging",
         certifications: ["ISO 22000:2025", "FSSAI", "Spice Board", "Organic"],
         applications: ["Cooking", "Pickles", "Bread", "Seasoning", "Traditional medicine", "Essential oils"],
         specifications: {
@@ -572,8 +574,15 @@ const ProductDetails = () => {
         "/assets/products/bagasse-cutlery/bagasse-close-up.png"
       ],
       description: "Sugarcane byproduct-based cutlery sets including spoons, forks, and knives. A 100% natural, biodegradable, and compostable alternative to traditional plastic cutlery.",
-      longDescription: "Our Bagasse Cutlery is manufactured from the fibrous residue left after sugarcane stalks are crushed to extract their juice. This byproduct, known as bagasse, is processed with high-heat molding to create sturdy, functional, and aesthetically pleasing cutlery. Unlike plastic or even some wooden alternatives, bagasse cutlery is fully compostable within 90 days in commercial facilities, leaving no toxic residue. It is exceptionally sturdy, heat-resistant, and oil-proof, making it suitable for both hot and cold food applications in premium catering, restaurants, and outdoor events.",
-      isEcoFriendly: true,
+      longDescription: "Thrayana Pvt Ltd is an innovative Bagasse Cutlery Exporter from India. Our eco-friendly cutlery is manufactured from the fibrous residue (bagasse) left after sugarcane processing. This surplus agricultural waste is processed with high-heat molding to create sturdy, 100% natural spoons, forks, and knives. We supply global distributors in the EU and USA who are seeking high-quality, plastic-free alternatives that meet EN 13432 compostability standards.",
+      exportDetails: {
+        hsnCode: "4823.70.10",
+        moq: "50,000 Units",
+        packaging: "Bulk Cardboard Cartons / Biodegradable Sleeves",
+        leadTime: "20-25 Days",
+        portOfLoading: "Chennai / Cochin, India",
+        supplyAbility: "1 Million Units per Month"
+      },
       details: {
         origin: "South India",
         processing: "High-heat compression molding from sugarcane pulp",
@@ -581,11 +590,11 @@ const ProductDetails = () => {
         certifications: ["ISO 22000:2025", "FSSAI", "EN 13432 (Compostability)", "FDA Food Grade"],
         applications: ["Sustainable catering", "High-end events", "Takeaway services", "Eco-conscious hospitality", "Quick-service restaurants"],
         specifications: {
-          material: "100% Sugarcane Bagasse",
-          sturdiness: "Extra reinforced tensile strength",
+          material: "100% Natural Sugarcane Bagasse",
+          sturdiness: "Reinforced tensile strength",
           temperatureResistance: "-20°C to 120°C",
-          sustainability: "100% biodegradable and compostable",
-          chemicalFree: "No chlorine or bleach",
+          sustainability: "100% biodegradable and compostable (90 days)",
+          chemicalFree: "Zero chlorine or bleach bleach",
           foodSafety: "BPA-free and non-toxic"
         },
         environmentalInfo: {
@@ -734,7 +743,17 @@ const ProductDetails = () => {
         "Supports heart health",
         "Promotes mental alertness",
         "Traditional health benefits"
-      ]
+      ],
+      howToUse: {
+        instructions: "Mix 1-2 teaspoons of black tea powder with hot water or milk. Steep for 3-5 minutes. Excellent for traditional hot chai, refreshing iced tea, or as a natural flavoring for cakes and biscuits.",
+        images: [
+          "/assets/products/black-tea-powder/Black-Tea-Powder.webp",
+          "/assets/products/black-tea-powder/tea-gardens.jpg",
+          "/assets/products/black-tea-powder/tea-processing.jpg",
+          "/assets/products/black-tea-powder/tea-applications.jpg",
+          "/assets/products/black-tea-powder/Black-Tea-Powder.webp"
+        ]
+      }
     }
   ];
 
@@ -871,7 +890,9 @@ const ProductDetails = () => {
                       </Badge>
                     )}
                   </div>
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">{product.name}</h1>
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+                    {product.name} <span className="text-primary/70">Exporter from India</span>
+                  </h1>
                   <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">{product.description}</p>
                 </div>
 
@@ -1063,26 +1084,31 @@ const ProductDetails = () => {
         </section>
 
         {/* How to Use Section */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-background border-t border-border">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6 text-center">How to Use</h2>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto text-center">
-              {product.howToUse.instructions}
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
-              {product.howToUse.images.map((img, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-xl aspect-square shadow-md hover:shadow-xl transition-all duration-500 bg-muted">
-                  <img
-                    src={img}
-                    alt={`Using ${product.name} ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-                </div>
-              ))}
+        {product.howToUse && (
+          <section className="py-8 sm:py-12 lg:py-16 bg-background border-t border-border">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6 text-center">How to Use</h2>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto text-center">
+                {product.howToUse.instructions}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
+                {product.howToUse.images.map((img, index) => (
+                  <div key={index} className="group relative overflow-hidden rounded-xl aspect-square shadow-md hover:shadow-xl transition-all duration-500 bg-muted">
+                    <img
+                      src={img}
+                      alt={`Using ${product.name} ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
+
+        {/* Trust & Certifications Section */}
+        <TrustSection />
 
         {/* Call to Action */}
         <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 to-secondary/10">

@@ -4,58 +4,103 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogService, BlogPost } from "@/services/blogService";
+import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
-import { Trash2 } from "lucide-react";
+import { Trash2, Edit3, Lock, LogOut, PlusCircle } from "lucide-react";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [isAdmin, setIsAdmin] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setBlogs(blogService.getBlogs());
+    
+    // Check if was already logged in
+    const authStatus = localStorage.getItem('thrayana_admin_auth');
+    if (authStatus === 'true') {
+      setIsAdmin(true);
+    }
   }, []);
 
-  const handleCreateBlog = () => {
-    const email = window.prompt("To create a blog, please enter the admin email address:");
+  const handleLogin = () => {
+    const email = window.prompt("Enter admin email:");
     if (email === "office@thrayana.com") {
-      const password = window.prompt("Please enter the admin password:");
+      const password = window.prompt("Enter password:");
       if (password === "Thrayana@12345") {
-        navigate('/blog/create');
+        setIsAdmin(true);
+        localStorage.setItem('thrayana_admin_auth', 'true');
+        toast.success("Admin access granted!");
       } else if (password !== null) {
-        toast.error("Incorrect password. Unauthorized.");
+        toast.error("Incorrect password.");
       }
-    } else if (email !== null) { // User didn't click Cancel
-      toast.error("Unauthorized. Only administrators can create blogs.");
+    } else if (email !== null) {
+      toast.error("Unauthorized email.");
     }
+  };
+
+  const handleLogout = () => {
+    setIsAdmin(false);
+    localStorage.removeItem('thrayana_admin_auth');
+    toast.success("Logged out from admin portal");
+  };
+
+  const handleCreateBlog = () => {
+    if (!isAdmin) {
+      handleLogin();
+      return;
+    }
+    navigate('/blog/create');
+  };
+
+  const handleEditBlog = (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    navigate(`/blog/edit/${id}`);
   };
 
   const handleDeleteBlog = (e: React.MouseEvent, id: string) => {
     e.stopPropagation();
-    const email = window.prompt("To delete a blog, please enter the admin email address:");
-    if (email === "office@thrayana.com") {
-      const password = window.prompt("Please enter the admin password:");
-      if (password === "Thrayana@12345") {
-        if (window.confirm("Are you sure you want to delete this blog post?")) {
-           blogService.deleteBlog(id);
-           setBlogs(blogService.getBlogs());
-           toast.success("Blog deleted successfully!");
-        }
-      } else if (password !== null) {
-        toast.error("Incorrect password. Unauthorized.");
-      }
-    } else if (email !== null) { 
-      toast.error("Unauthorized. Only administrators can delete blogs.");
+    if (window.confirm("Are you sure you want to delete this blog post?")) {
+      blogService.deleteBlog(id);
+      setBlogs(blogService.getBlogs());
+      toast.success("Blog deleted successfully!");
     }
   };
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Thrayana Blog | Insights on Ayurveda, Natural Foods & Global Export</title>
+        <meta name="description" content="Discover expert insights, health benefits of Ayurveda, and the latest trends in global food export on the Thrayana blog. Knowledge for healthy living and global trade." />
+        <link rel="canonical" href="https://www.thrayana.com/blog" />
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
-
+          <div className="flex justify-between items-center mt-8">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">Industry Insights & <span className="text-primary italic">Ayurvedic Wisdom</span></h1>
+            {isAdmin ? (
+               <div className="flex gap-3">
+                 <Button onClick={handleCreateBlog} size="sm" className="btn-primary shadow-md hover:shadow-lg transition-all">
+                   <PlusCircle className="w-4 h-4 mr-2" /> New Post
+                 </Button>
+                 <Button onClick={handleLogout} variant="outline" size="sm" className="text-red-500 border-red-200 bg-red-50/30 hover:bg-red-50 shadow-sm transition-all">
+                   <LogOut className="w-4 h-4 mr-2" /> Logout
+                 </Button>
+               </div>
+            ) : (
+               <Button 
+                 onClick={handleLogin} 
+                 variant="outline" 
+                 size="sm" 
+                 className="bg-blue-600 hover:bg-blue-700 text-white border-blue-700 shadow-md hover:shadow-lg transition-all font-semibold px-4"
+               >
+                 <Lock className="w-4 h-4 mr-2" /> Admin Login
+               </Button>
+            )}
+          </div>
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 pb-8 mt-8 lg:mt-12">
             {/* Left Column - Main Content */}
@@ -101,25 +146,30 @@ const Blog = () => {
                              Read more <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                            </button>
 
-                           <button 
-                             onClick={(e) => handleDeleteBlog(e, blog.id)}
-                             className="text-gray-400 hover:text-red-500 transition-colors p-1.5 rounded hover:bg-red-50"
-                             title="Delete Blog"
-                           >
-                             <Trash2 className="w-4 h-4" />
-                           </button>
+                           {isAdmin && (
+                             <div className="flex gap-2">
+                               <button 
+                                 onClick={(e) => handleEditBlog(e, blog.id)}
+                                 className="text-blue-500 hover:text-blue-700 transition-colors p-1.5 rounded hover:bg-blue-50 border border-blue-100"
+                                 title="Edit Blog"
+                               >
+                                 <Edit3 className="w-4 h-4" />
+                               </button>
+                               <button 
+                                 onClick={(e) => handleDeleteBlog(e, blog.id)}
+                                 className="text-gray-400 hover:text-red-500 transition-colors p-1.5 rounded hover:bg-red-50 border border-red-100"
+                                 title="Delete Blog"
+                               >
+                                 <Trash2 className="w-4 h-4" />
+                               </button>
+                             </div>
+                           )}
                         </div>
                       </div>
                     </article>
                   ))}
                 </div>
               )}
-              
-              <div className="mt-12 flex justify-start">
-                <Button onClick={handleCreateBlog} variant="outline" className="text-muted-foreground hover:text-foreground">
-                  Create New Blog
-                </Button>
-              </div>
             </div>
 
             {/* Right Column - Sidebar */}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,10 @@ import toast from "react-hot-toast";
 import { ArrowLeft, Save } from "lucide-react";
 
 const CreateBlog = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isEditing = !!id;
   
   const [formData, setFormData] = useState({
     title: "",
@@ -24,7 +26,23 @@ const CreateBlog = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    
+    if (isEditing) {
+      const existingBlog = blogService.getBlogById(id);
+      if (existingBlog) {
+        setFormData({
+          title: existingBlog.title,
+          imageUrl: existingBlog.imageUrl,
+          excerpt: existingBlog.excerpt,
+          content: existingBlog.content,
+          author: existingBlog.author
+        });
+      } else {
+        toast.error("Blog post not found.");
+        navigate('/blog');
+      }
+    }
+  }, [id, isEditing, navigate]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -47,13 +65,20 @@ const CreateBlog = () => {
     setIsSubmitting(true);
 
     try {
-      blogService.createBlog(formData);
-      toast.success("Blog published successfully!", {
-        style: { background: '#10B981', color: '#fff', fontWeight: '500' }
-      });
+      if (isEditing) {
+        blogService.updateBlog(id, formData);
+        toast.success("Blog updated successfully!", {
+          style: { background: '#10B981', color: '#fff', fontWeight: '500' }
+        });
+      } else {
+        blogService.createBlog(formData);
+        toast.success("Blog published successfully!", {
+          style: { background: '#10B981', color: '#fff', fontWeight: '500' }
+        });
+      }
       navigate('/blog');
     } catch (error) {
-      toast.error("Failed to publish blog.");
+      toast.error(isEditing ? "Failed to update blog." : "Failed to publish blog.");
       setIsSubmitting(false);
     }
   };
@@ -75,7 +100,7 @@ const CreateBlog = () => {
 
           <div className="bg-card rounded-2xl shadow-xl border overflow-hidden">
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 sm:p-8 text-center sm:text-left">
-              <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Create New Blog Post</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{isEditing ? "Edit Blog Post" : "Create New Blog Post"}</h1>
               <p className="text-gray-400 text-sm sm:text-base">Use the template below to draft and publish new content.</p>
             </div>
             
@@ -102,7 +127,7 @@ const CreateBlog = () => {
                     name="imageUpload"
                     type="file"
                     accept="image/*"
-                    required
+                    required={!isEditing}
                     onChange={handleImageUpload}
                     className="bg-white/50 focus:bg-white transition-colors file:mr-4 file:py-1.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-slate-100 file:text-slate-900 hover:file:bg-slate-200 cursor-pointer text-muted-foreground"
                   />
@@ -170,7 +195,7 @@ const CreateBlog = () => {
                   className="btn-primary px-8"
                 >
                   <Save className="w-4 h-4 mr-2" />
-                  {isSubmitting ? "Publishing..." : "Publish Blog"}
+                  {isSubmitting ? (isEditing ? "Updating..." : "Publishing...") : (isEditing ? "Update Blog" : "Publish Blog")}
                 </Button>
               </div>
             </form>

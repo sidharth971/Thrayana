@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Eye, Calendar, Building2, Award, Shield, Globe } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -119,6 +120,11 @@ const Certificates = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Certifications & Quality Standards | Thrayana Private Limited</title>
+        <meta name="description" content="View our international certifications including FSSAI, APEDA, and Organic NPOP. Thrayana is committed to global quality standards and transparent trade practices." />
+        <link rel="canonical" href="https://www.thrayana.com/certificates" />
+      </Helmet>
       <Header />
       <main className="pt-16 sm:pt-20 lg:pt-24">
         {/* Hero Section */}

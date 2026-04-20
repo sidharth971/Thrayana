@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 import { Shield, Info, Lock, Share2, Database, FileText, CheckCircle, Bell } from "lucide-react";
 
 const PrivacyPolicy = () => {
@@ -131,6 +132,11 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privacy Policy | Thrayana Private Limited</title>
+        <meta name="description" content="Read our privacy policy to understand how Thrayana collects, uses, and protects your information during international trade inquiries and orders." />
+        <link rel="canonical" href="https://www.thrayana.com/privacy-policy" />
+      </Helmet>
       <Header />
       
       <main className="pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-24">

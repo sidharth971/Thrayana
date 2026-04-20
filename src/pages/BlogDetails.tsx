@@ -4,20 +4,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { blogService, BlogPost } from "@/services/blogService";
-import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
+import { ArrowLeft, Calendar, User, Clock, Edit3 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetails = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState<BlogPost | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (slug) {
       const foundBlog = blogService.getBlogBySlug(slug);
       if (foundBlog) {
         setBlog(foundBlog);
       }
+    }
+
+    // Check admin status
+    const authStatus = localStorage.getItem('thrayana_admin_auth');
+    if (authStatus === 'true') {
+      setIsAdmin(true);
     }
   }, [slug]);
 
@@ -45,17 +52,33 @@ const BlogDetails = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${blog.title} | Thrayana Blog`}</title>
+        <meta name="description" content={blog.excerpt} />
+        <link rel="canonical" href={`https://www.thrayana.com/blog/${blog.slug || blog.id}`} />
+      </Helmet>
       <Header />
       
       <main className="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pt-8 pb-16">
-          <Button 
-            variant="ghost" 
-            onClick={() => navigate('/blog')}
-            className="text-muted-foreground hover:text-primary mb-8 pl-0 hover:bg-transparent"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-          </Button>
+          <div className="flex justify-between items-center mb-8">
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate('/blog')}
+              className="text-muted-foreground hover:text-primary pl-0 hover:bg-transparent"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
+            </Button>
+
+            {isAdmin && (
+              <Button 
+                onClick={() => navigate(`/blog/edit/${blog.id}`)}
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                <Edit3 className="w-4 h-4 mr-2" /> Edit Article
+              </Button>
+            )}
+          </div>
 
           <header className="mb-10 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
