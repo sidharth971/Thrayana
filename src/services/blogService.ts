@@ -41,6 +41,16 @@ const defaultBlogs: BlogPost[] = [
     createdAt: new Date(Date.now() - 86400000 * 2).toISOString(),
     author: 'Thrayana Market Strategy',
     slug: 'ashwagandha-root-powder-export-trends-2026'
+  },
+  {
+    id: '3',
+    title: 'The Rise of Sustainable Tableware: Importing Bagasse Cutlery from India',
+    excerpt: 'Explore the shift towards biodegradable sugarcane bagasse cutlery in the global hospitality sector and how to source wholesale from India.',
+    content: 'With the global crackdown on single-use plastics, Sugarcane Bagasse Cutlery has emerged as the premier sustainable alternative for the catering and hospitality industries. Manufactured from 100% renewable sugarcane fiber, this compostable tableware is oil-resistant, microwave-safe, and leaves zero toxic footprint. Thrayana Pvt Ltd specializes in the bulk export of reinforced bagasse spoons, forks, and knives that meet stringent EU and FDA food safety standards. Our manufacturing process uses high-heat compression molding, resulting in extra-sturdy products suitable for both hot and cold food. For global distributors, we provide customized bulk packaging and full documentation for seamless customs clearance. This article outlines the cost-benefit analysis of switching to bagasse and the logistical advantages of sourcing directly from South India\'s manufacturing hubs.',
+    imageUrl: '/assets/products/bagasse-cutlery/bagasse-main.png',
+    createdAt: new Date(Date.now() - 86400000 * 1).toISOString(),
+    author: 'Thrayana Eco-Solutions',
+    slug: 'importing-sustainable-bagasse-cutlery-from-india'
   }
 ];
 
