@@ -348,9 +348,9 @@ const ProductDetails = () => {
       howToUse: {
         instructions: "Blend into green smoothies, juices, or stir into soups and dal. You can also sprinkle it over fresh salads for an extra nutrient boost.",
         images: [
-          "/assets/usage/moringa-powder/usage-1.png",
+          "/assets/usage/moringa-powder/ways-to-use-new.png",
           "/assets/usage/moringa-powder/usage-2.png",
-          "/assets/usage/moringa-powder/ways-to-use.png"
+          "/assets/usage/moringa-powder/moringa-usage-infographic.png"
         ]
       }
     },
