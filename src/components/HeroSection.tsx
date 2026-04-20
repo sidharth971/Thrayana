@@ -31,20 +31,20 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="flex-1 space-y-6 sm:space-y-8 animate-in slide-in-from-left duration-1000 text-center lg:text-left">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-shadow-lg text-center lg:text-left" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Ashwagandha, Honey, Bagasse Cutlery, Indian Spices & 100% Natural Food <span className="gradient-text">Exporter</span> Globally
+              Ashwagandha powder, Moringa powder, Banana powder, Honey, Bagasse Cutlery, Indian Spices & 100% Natural Food <span className="gradient-text">Exporter</span> Globally
             </h1>
-            
+
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
-              From premium Ashwagandha Root and pure Wild Forest Honey to traditional Indian spices and 
-              100% natural food products, we export the finest quality natural products globally. Our Ashwagandha is 
-              sustainably harvested and processed to preserve its potent adaptogenic properties, while our Wild Forest Honey is sourced from pristine 
-              Western Ghats. Combined with authentic Indian spices and purely natural food products, we connect 
+              From premium Ashwagandha Root and pure Wild Forest Honey to traditional Indian spices and
+              100% natural food products, we export the finest quality natural products globally. Our Ashwagandha is
+              sustainably harvested and processed to preserve its potent adaptogenic properties, while our Wild Forest Honey is sourced from pristine
+              Western Ghats. Combined with authentic Indian spices and purely natural food products, we connect
               farmers to global markets, making India a dominant player in natural food exports.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="btn-primary"
                 onClick={() => navigate('/contact')}
               >
@@ -60,11 +60,10 @@ const HeroSection = () => {
                 {heroImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                      index === currentIndex 
-                        ? "opacity-100 transform translate-x-0" 
+                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentIndex
+                        ? "opacity-100 transform translate-x-0"
                         : "opacity-0 transform translate-x-full"
-                    }`}
+                      }`}
                   >
                     <img
                       src={image}
@@ -81,18 +80,17 @@ const HeroSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                      index === currentIndex 
-                        ? "bg-primary shadow-lg" 
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${index === currentIndex
+                        ? "bg-primary shadow-lg"
                         : "bg-gray-300 hover:bg-gray-400"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
 
               {/* Previous/Next Buttons */}
               <button
-                onClick={() => setCurrentIndex((prev) => 
+                onClick={() => setCurrentIndex((prev) =>
                   prev === 0 ? heroImages.length - 1 : prev - 1
                 )}
                 className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110 z-20"
@@ -101,9 +99,9 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               <button
-                onClick={() => setCurrentIndex((prev) => 
+                onClick={() => setCurrentIndex((prev) =>
                   (prev + 1) % heroImages.length
                 )}
                 className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110 z-20"

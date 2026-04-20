@@ -19,19 +19,19 @@ const ProductDetails = () => {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-    
+
     // Force scroll after component renders
     const timer1 = setTimeout(() => {
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
     }, 50);
-    
+
     // Another scroll after DOM updates
     const timer2 = setTimeout(() => {
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
     }, 200);
-    
+
     // Final scroll to ensure it works
     const timer3 = setTimeout(() => {
       window.scrollTo({
@@ -41,7 +41,7 @@ const ProductDetails = () => {
       });
       document.documentElement.scrollTop = 0;
     }, 500);
-    
+
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
@@ -807,7 +807,7 @@ const ProductDetails = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{product.name === "Moringa Powder" ? "Moringa Powder Export from India | Bulk Supplier | Thrayana" : `${product.name} Bulk Exporter from India | Thrayana Pvt Ltd`}</title>
+        <title>{product.name === "Moringa Powder" ? "Moringa Powder Export from India | Bulk Supplier | Thrayana | Bulk Moringa Powder Supplier from India" : `${product.name} Bulk Exporter from India | Thrayana Pvt Ltd`}</title>
         <meta name="description" content={product.description} />
         <link rel="canonical" href={`https://www.thrayana.com/products/${product.name.replace(/\s+/g, '-')}`} />
         <script type="application/ld+json">
@@ -965,7 +965,7 @@ const ProductDetails = () => {
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">Product Details</h2>
                 <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">{product.longDescription}</p>
-                  
+
                   {/* Specifications Table */}
                   <div className="bg-card rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
                     <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">Technical Specifications</h3>
@@ -1072,9 +1072,9 @@ const ProductDetails = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
               {product.howToUse.images.map((img, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-xl aspect-square shadow-md hover:shadow-xl transition-all duration-500 bg-muted">
-                  <img 
-                    src={img} 
-                    alt={`Using ${product.name} ${index + 1}`} 
+                  <img
+                    src={img}
+                    alt={`Using ${product.name} ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
